@@ -813,6 +813,7 @@ class Interact {
 				case 83: arrayLocation = 85; break;
 				case 84: arrayLocation = 85; break;
 				case 85: 
+					theUI.setArt("delapHouse.jpg");
 					if(response == 1){
 						arrayLocation = 86;
 					}

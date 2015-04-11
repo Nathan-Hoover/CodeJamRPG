@@ -19,7 +19,6 @@ import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
-import javax.swing.UIManager;
 
 public class CodeJamUI {
 	Interact theInteractions;
@@ -125,7 +124,7 @@ public class CodeJamUI {
 
 		frame.add(artPanel, frameConstraints);
 		
-		setArt("scenePlaceHolder.jpg");
+		setArt("forest3.jpg");
 		
 		artPanel.add(picLabel);
 	}
@@ -241,33 +240,33 @@ public class CodeJamUI {
 		choicePanel.setOpaque(false);
 		
 		choice1 = new JLabel("Choice 1");
-		choice1.setMinimumSize(new Dimension(500, 30));
-		choice1.setPreferredSize(new Dimension(500, 30));
-		choice1.setMaximumSize(new Dimension(500, 30));
+		choice1.setMinimumSize(new Dimension(600, 30));
+		choice1.setPreferredSize(new Dimension(600, 30));
+		choice1.setMaximumSize(new Dimension(600, 30));
 		choice1.setOpaque(true);
 		choice1.setBackground(Color.black);
 		choice1.setForeground(Color.white);
 		
 		choice2 = new JLabel("Choice 2");
-		choice2.setMinimumSize(new Dimension(500, 30));
-		choice2.setPreferredSize(new Dimension(500, 30));
-		choice2.setMaximumSize(new Dimension(500, 30));
+		choice2.setMinimumSize(new Dimension(600, 30));
+		choice2.setPreferredSize(new Dimension(600, 30));
+		choice2.setMaximumSize(new Dimension(600, 30));
 		choice2.setOpaque(true);
 		choice2.setBackground(Color.black);
 		choice2.setForeground(Color.white);
 		
 		choice3 = new JLabel("Choice 3"); 
-		choice3.setMinimumSize(new Dimension(500, 30));
-		choice3.setPreferredSize(new Dimension(500, 30));
-		choice3.setMaximumSize(new Dimension(500, 30));
+		choice3.setMinimumSize(new Dimension(600, 30));
+		choice3.setPreferredSize(new Dimension(600, 30));
+		choice3.setMaximumSize(new Dimension(600, 30));
 		choice3.setOpaque(true);
 		choice3.setBackground(Color.black);
 		choice3.setForeground(Color.white);
 		
 		choice4 = new JLabel("Choice 4");
-		choice4.setMinimumSize(new Dimension(500, 30));
-		choice4.setPreferredSize(new Dimension(500, 30));
-		choice4.setMaximumSize(new Dimension(500, 30));
+		choice4.setMinimumSize(new Dimension(600, 30));
+		choice4.setPreferredSize(new Dimension(600, 30));
+		choice4.setMaximumSize(new Dimension(600, 30));
 		choice4.setOpaque(true);
 		choice4.setBackground(Color.black);
 		choice4.setForeground(Color.white);
@@ -444,11 +443,13 @@ public class CodeJamUI {
 		
 		promptText = new JTextArea("");
 		promptText.setLineWrap(true);
+		promptText.setWrapStyleWord(true);
 		promptText.setEditable(false);
+		promptText.setPreferredSize(new Dimension(700, 300));
 		
 		promptScroll = new JScrollPane(promptText);
 		promptScroll.setBackground(Color.black);
-		promptScroll.setPreferredSize(new Dimension(500,100));
+		promptScroll.setPreferredSize(new Dimension(750,100));
 		
 		GridBagConstraints promptPanelConstraints = new GridBagConstraints();
 		promptPanelConstraints.fill = GridBagConstraints.NONE;

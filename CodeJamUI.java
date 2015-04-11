@@ -43,7 +43,7 @@ public class CodeJamUI {
 		titleScreenConstraints.weightx = 1.0;
 		titleScreenConstraints.weighty = 0.70;
 		
-		JLabel title = new JLabel("Title Pending", SwingConstants.CENTER);
+		JLabel title = new JLabel("To Diverge From Fate", SwingConstants.CENTER);
 		title.setFont(new Font("Serif", Font.PLAIN, 100));
 		title.setForeground(Color.white);
 		JLabel by = new JLabel("BY: Nathaniel Hoover, Brandon Bauman, Wes Letcher", SwingConstants.CENTER);
@@ -471,7 +471,7 @@ public class CodeJamUI {
 
 	private void createFrame() {
 		frame = new JFrame();
-		frame.setTitle("We Norbs");
+		frame.setTitle("To Diverge From Fate - We Norbs");
 		frame.setLayout(new GridBagLayout());
 		frame.setLocationRelativeTo(null);
 		frame.setMinimumSize(new Dimension(1280 , 720));

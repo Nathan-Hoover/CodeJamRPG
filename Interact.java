@@ -312,68 +312,83 @@ class Interact {
 		promptArray[73] = "You look out the window. You can see across the crop fields and into the distance.  You can see the sun’s rays just barely over the edge of the ocean. You remember what the farmer said about Amor visiting the blacksmith. You glance over at the blacksmith’s shop and notice a dim blue aura.";
 		choiceArray[73][0] = "Investigate.";
 
-		promptArray[74] = "";
-		choiceArray[74][0] = "Continue";
+		promptArray[74] = "Farmer- \"Amor… Yes I do think he came through.  It was brief; he spent a lot of time with the blacksmith, and left before the day was out.  It was an odd visitor.\"";
+		choiceArray[74][0] = "\"Thanks, I appreciate the info.\"";
 
-		promptArray[75] = "";
-		choiceArray[75][0] = "Continue";
+		promptArray[75] = "You leave the tavern and head  to the blacksmith’s shop.  You glance around the shop until you notice the boxes in the back are more blue than the rest of the shop.";
+		choiceArray[75][0] = "[Dex>12] You slide the boxes silently out of the way.";
+		choiceArray[75][1] = "[Str>12] You hurl the boxes across the room.";
+		choiceArray[75][2] = "[Int>12] You spy through the boxes.";
+		choiceArray[75][3] = "You see if you can find the source of the boxes.";
 
-		promptArray[76] = "";
-		choiceArray[76][0] = "Continue";
+		promptArray[76] = "With the boxes moved out of the way, you unveil a secret passage which the blue aura is pouring out from.";
+		choiceArray[76][0] = "Enter the passage";
 
-		promptArray[77] = "";
-		choiceArray[77][0] = "Continue";
+		promptArray[77] = "The boxes fly across the room, crashing in the road.  You find a secret passage under the boxes which the blue aura is pouring out from.";
+		choiceArray[77][0] = "Enter the passage.";
 
-		promptArray[78] = "";
-		choiceArray[78][0] = "Continue";
+		promptArray[78] = "You find a secret passage  between the boxes and find a path that you can navigate through.";
+		choiceArray[78][0] = "Enter the passage";
 
-		promptArray[79] = "";
-		choiceArray[79][0] = "Continue";
+		promptArray[79] = "As you search for the source of the blue aura, you stumble over an ingot and smash into the boxes, revealing a secret passage.";
+		choiceArray[79][0] = "Enter the passage.";
 
-		promptArray[80] = "";
-		choiceArray[80][0] = "Continue";
+		promptArray[80] = "You enter the passage, the blue aura pouring around your body like an enveloping mist .  As you draw closer, you begin to make out a pentagram shaped circle on the ground when you hear Borale call out, \"Watch your back!\" You quickly turn around to find the blacksmith closing on you with an axe.";
+		choiceArray[80][0] = "[Str] Overpower the smith";
+		choiceArray[80][1] = "[Dex] Evade and escape";
+		choiceArray[80][2] = "[Int] Persuade to stop";
+		choiceArray[80][3] = "Back up into the cavern";
 
-		promptArray[81] = "";
+		promptArray[81] = "As the smith comes at you with his axe ready to strike, you match his grip on the axe with yours.  You both struggle for the axe when you manage to trip the smith the ground.  You run out of the exit and smash one of the support beams of the shop with a metal rod.  The beam snaps and the house collapses.  Just before it hits, you look back to see the smith coming out of the passage, axe in hand, get crushed by the wreckage.  When the dust clears you see the axe in the rubble.  You grab it.";
 		choiceArray[81][0] = "Continue";
 
-		promptArray[82] = "";
+		promptArray[82] = "The smith heads in your direction, but with your cunning you slide right past him.  You run out of the exit and smash one of the support beams of the shop with a metal rod.  The beam snaps and the house collapses.  Just before it hits, you look back to see the smith coming out of the passage, axe in hand, get crushed by the wreckage.  When the dust clears you see the axe in the rubble.  You grab it.";
 		choiceArray[82][0] = "Continue";
 
-		promptArray[83] = "";
+		promptArray[83] = "You call out in attempt to persuade the smith to stop his attack.  He does not hesitate in his assault.  Realizing this, you run out of the exit and smash one of the support beams of the shop with a metal rod.  The beam snaps and the house collapses.  Just before it hits, you look back to see the smith coming out of the passage, axe in hand, get crushed by the wreckage.  When the dust clears you see the axe in the rubble.  You grab it.";
 		choiceArray[83][0] = "Continue";
 
-		promptArray[84] = "";
+		promptArray[84] = "You back up into the cavern towards the pentagram on the ground.  The smith swings for you as you dodge, making him fall on the pentagram.  The pentagram lights up and explodes in a ball of lightning.  When the smoke clears, the smith is left on the floor.  You take his axe and head up the exit.";
 		choiceArray[84][0] = "Continue";
 
-		promptArray[85] = "";
-		choiceArray[85][0] = "Continue";
+		promptArray[85] = "The morning arrives shortly after and you decide to head back home to see if your son is there.  You head northeast towards the Forest of Fate.  After a few weeks of traveling you arrive at your home.  It is vastly dilapidated in comparison to how you remember it.  Nature has invaded, entering through the wooden walls, pulling it apart where it can in an attempt to assimilate it.  It is definitely your home, however it doesn’t feel like you belong here anymore.  You notice look around you and notice two separate remains of campfires as well as spots on the grass where tents were raised.  Multiple people have been here.";
+		choiceArray[85][0] = "Go inside";
+		choiceArray[85][1] = "Look around back";
+		choiceArray[85][2] = "Head towards where you were hunting with Amor";
 
-		promptArray[86] = "";
-		choiceArray[86][0] = "Continue";
+		promptArray[86] = "You head inside, the stairs creaking so harsh that it makes you wonder if they’ll hold.  You enter the living room.  The room has its couch and its chairs broken or torn apart, used for parts or perhaps kindle for the campfires.  ";
+		choiceArray[86][0] = "Head upstairs";
+		choiceArray[86][1] = "Go back outside";
 
-		promptArray[87] = "";
-		choiceArray[87][0] = "Continue";
+		promptArray[87] = "You head around the back of the house to see the cliff heading to the ocean.  The back of the house is overgrown like the rest of the house, but the grass is quite tall suggesting that no one has come back here.";
+		choiceArray[87][0] = "Go back to the front";
 
-		promptArray[88] = "";
-		choiceArray[88][0] = "Continue";
+		promptArray[88] = "You head upstairs, the stairs creaking worse than the outside stairs.  You can hear the snapping of fibers as you go continually higher.  You arrive at the bedroom that you and Amor slept in.  The beds have been torn apart and scavenged similar to the couch and chairs downstairs.  Your dresser has its drawers pulled out, as if someone took everything out of it in a hurry.  ";
+		choiceArray[88][0] = "Head back downstairs";
 
-		promptArray[89] = "";
-		choiceArray[89][0] = "Continue";
+		promptArray[89] = "You go back outside.";
+		choiceArray[89][0] = "Head into the forest";
 
-		promptArray[90] = "";
-		choiceArray[90][0] = "Continue";
+		promptArray[90] = "You arrive at the main floor";
+		choiceArray[90][0] = "Go back to the front";
 
-		promptArray[91] = "";
-		choiceArray[91][0] = "Continue";
-
-		promptArray[92] = "";
-		choiceArray[92][0] = "Continue";
-
-		promptArray[93] = "";
-		choiceArray[93][0] = "Continue";
-
-		promptArray[94] = "";
-		choiceArray[94][0] = "Continue";
+		promptArray[91] = "You head into the forest.  As you walk the path, memories of what happened in the past flood your mind.  Your vision begins to blur.  You arrive at the spot where you were attacked in the past.  There are five sorcerers there, the same from before.  Your head begins to spin.  ";
+		choiceArray[91][0] = "[Str > 12] Grab one of the Sorcerers, \"It was you!  You did this to me!  Who is Borale?  Why is he inside me!?\"";
+		choiceArray[91][1] = "[Dex > 12] You examine your surroundings to check for traps.";
+		choiceArray[91][2] = "[int > 12] Observe the sorcerer’s body movements and facial expressions for a logical solution.";
+		choiceArray[91][3] = "Kill them!";
+		
+		promptArray[92] = "Sorcerer1- \"We didn’t do anything! I swear!  It was just bad luck that you stepped on the circle!\"  You let go of the sorcerer and look down at the glowing blue circle on the ground.  The blue aura is emanating from it.";
+		choiceArray[92][0] = "\"What is this circle?\"";
+		choiceArray[92][1] = "\"Who is Borale?\"";
+		
+		promptArray[93] = "You look around around you quickly and efficiently.  There is a blue pentagram surrounded by a  circle on the ground, the same one you’ve seen in the cave between Seabreeze Village and West City and the same one as in Natten.  You have questions and these sorcerers have answers.";
+		choiceArray[93][0] = "\"What is this circle?\"";
+		choiceArray[93][1] = "\"Who is Borale?\"";
+		
+		promptArray[94] = "You observe the Sorcerers as you encounter them.  The sorcerers all have a look of surprise, fear, and most importantly, regret.  They all seem to be a bit shifty, not in a harmful way or like they are going to retreat.  They just seem nervous.  You think they will be willing to answer questions.";
+		choiceArray[94][0] = "\"What is this circle?\"";
+		choiceArray[94][1] = "\"Who is Borale?\"";
 
 		promptArray[95] = "";
 		choiceArray[95][0] = "Continue";
@@ -389,96 +404,6 @@ class Interact {
 
 		promptArray[99] = "";
 		choiceArray[99][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
 
 		promptArray[100] = "";
 		choiceArray[100][0] = "Continue";
@@ -883,7 +808,71 @@ class Interact {
 						arrayLocation = 84;
 					}
 					break;
-					
+				case 81: arrayLocation = 85; break;
+				case 82: arrayLocation = 85; break;
+				case 83: arrayLocation = 85; break;
+				case 84: arrayLocation = 85; break;
+				case 85: 
+					if(response == 1){
+						arrayLocation = 86;
+					}
+					if(response == 2){
+						arrayLocation = 87;
+					}
+					if(response == 3){
+						arrayLocation = 88;
+					}
+					break;
+				case 86:
+					if(response == 1){
+						arrayLocation = 88;
+					}
+					if(response == 2){
+						arrayLocation = 89;
+					}
+					break;
+				case 87: arrayLocation = 89; break;
+				case 88: arrayLocation = 90; break;
+				case 89: arrayLocation = 91; break;
+				case 90: arrayLocation = 89; break;
+				case 91: 
+					if(response == 1){
+						if(thePlayer.getStrength() > 12){
+							arrayLocation = 92;
+						}else{
+							arrayLocation = 91;
+						}
+					}
+					if(response == 2){
+						if(thePlayer.getDexterity() > 12){
+							arrayLocation = 93;
+						}else{
+							arrayLocation = 91;
+						}
+					}
+					if(response == 3){
+						if(thePlayer.getIntelect() > 12){
+							arrayLocation = 94;
+						}else{
+							arrayLocation = 91;
+						}
+					}
+					if(response == 4){
+							arrayLocation = 95;
+					}
+					break;
+				case 92: 
+				case 93:
+				case 94:
+					if(response == 1){
+						arrayLocation = 96;
+					}
+					if(response == 2){
+						arrayLocation = 97;
+					}
+					break;
+				case 95:
+				
 				case  999:
 					arrayLocation = 0;
 					thePlayer.dexterity = 10;

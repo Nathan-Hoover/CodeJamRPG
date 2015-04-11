@@ -149,20 +149,343 @@ class Interact {
 		promptArray[28] = "You shove the note in your pocket.  You still have so many questions.  What happened in the cave?  Where am I?  Where is Amor? you think it would be best to head towards the city in the west for answers.";
 		choiceArray[28][0] = "Continue.";
 		
-		promptArray[29] = "";
-		choiceArray[29][0] = "";
+		promptArray[29] = "You head to the city in the west.  A sign reads \"West City\".  The irony seeps in and you let out a brief chuckle.  You enter West City.  A great arena made of wood stands in the center of the desert town.  Masses of people are all eager to get into the spectator gates, pushing and shoving their way through the crowd.  Around the grand stadium, the roads are lined with merchants trying to sell wares from around the island: swords, gems, exotic foods and more.  Around them appears a housing district, obviously well maintained and taken care of.  A table rests in front of the arena where a hefty, loud man calls you out. Entry Attendant- \"Hey, aren’t you the infamous murderer that has been tearin’ through these parts recently?\"";
+		choiceArray[29][0] = "\"I’m no murderer.\"";
+		choiceArray[29][1] = "[int] \"Why don’t you tell me about this murderer?\"";
+		choiceArray[29][2] = "\"I found a cave back before this town, do you know anything about it?\"";
 		
-		promptArray[30] = "";
-		choiceArray[30][0] = "";
+		promptArray[30] = "Entry Attendant- \"Well, you sure look like him!\"  He shows you a wanted poster with a man of distinct features almost perfectly matching your profile.  \"I’ll tell you what, I won’t say anything if you want to hop in the arena and give our folks a good show!  The regulars haven’t been providing too much entertainment for the guests!  There’s even a good amount of gold for winning if that interests ya more.\"";
+		choiceArray[30][0] = "[str] “Well, I’m no stranger to danger.”";
+		choiceArray[30][1] = "[dex] \"I wouldn’t mind testing out my blades.\"";
+		choiceArray[30][2] = "[int] \"Some gold wouldn’t hurt for my travels\"";
 		
-		promptArray[31] = "";
-		choiceArray[31][0] = "";
+		promptArray[31] = "Entry Attendant- \"A feisty one, eh?  Alright, just hope in the ring and we will show you a good time!\"  The man winks in a provocative way and opens the gate.";
+		choiceArray[31][0] = "Continue into the arena.";
 		
-		promptArray[32] = "";
-		choiceArray[32][0] = "";
+		promptArray[32] = "Entry Attendant- \"A bit arrogant, but there are much more arrogant ‘round here than you.  Alright, just hope in the ring and we will show you a good time!\"  The man winks in a provocative way and opens the gate.";
+		choiceArray[32][0] = "Continue into the arena.";
 		
-		promptArray[33] = "";
-		choiceArray[33][0] = "";
+		promptArray[33] = "Entry Attendant- \"Thinking of the future is smart thinkin’.  Alright, just hope in the ring and we will show you a good time!\"  The man winks in a provocative way and opens the gate.";
+		choiceArray[33][0] = "Continue into the arena.";
+		
+		promptArray[34] = "You step into the arena and immediately smell a mix of decaying and fresh blood, enough to make your eyes water.  You hear someone talking to you.Borale- \"Hey!  I’m glad I could finally reach you!  I’ve been sitting in here trying to talk to you for a while now, I guess it takes a bit more than stealing your body to get a conversation goin’, huh?\"";
+		choiceArray[34][0] = "\"Who is that? Who is talking?\"";
+		choiceArray[34][1] = "You look around. \"Where are you?\"";
+		
+		promptArray[35] = "Borale- \"I’m Borale, I’ve been with you for quite a long time, y’know.  I thought you would’ve noticed earlier, but I guess everyone isn’t as observant of me.\"";
+		choiceArray[35][0] = "\"You look around.  Where are you?\"";
+		
+		promptArray[36] = "Borale- \"Ah well, that’s a bit hard to explain.  It seems that I’m inside of you, y’see.\"  Your arm moves involuntarily towards your chest and points at it.";
+		choiceArray[36][0] = "\"I don’t understand.\"";
+		choiceArray[36][1] = "\"Do you know where my son is?\"";
+		
+		promptArray[37] = "Borale- \"Well, you’ll come to understand over time.  Basically, we share a body.\"";
+		choiceArray[37][0] = "\"Do you know where my son is?\"";
+		
+		promptArray[38] = "Borale- \"Mmmmm…. maybe I do.  Maybe I don’t.  All depends on what you do for me. Right now though, it might be in your best interest to let me take the reins.\"  After hearing this, you realize your opponent stands before you.  A seven foot tall man wearing steel armor from head to toe carrying a massive flail, its heads dangling below him.";
+		choiceArray[38][0] = "\"Fine.  Get me out of this.\"";
+		choiceArray[38][1] = "\"No, I can handle this myself.\"";
+
+		promptArray[39] = "Borale- \"Thought you’d never ask!\"  You feel caught up in the moment, the whole scene becomes a blur. You see yourself move towards the giant, but before impact you blink… and open your eyes outside with a bag of gold in your hand.  Your clothes are a bit blood stained, but nothing that hasn’t happened before while hunting. Entry Attendant- \"Spectacular show, sir!  Best we’ve seen in ages!  Please do come back, consider you an honored guest here!\"";
+		choiceArray[39][0] = "Ask about Amor.";
+		
+		promptArray[40] = "Borale- \"Have it your way, then. I won’t interfere.\" As the words stop in your head, the calmness you felt immediately disappeared.  Fear overtakes your body, stopped you from moving. Your body doesn’t listen to you. The large man approached, flail swinging in preparation for the engagement. He starts his swing, the flail coming directly at your head. In the spur of the moment you dodge left, inches from getting splattered all over the moist sand. You line up a counterattack with you dagger, aiming for his unarmored right armpit. Your strike connects so fluidly it almost seemed supernatural. The giant man grips his armpit, but doesn’t stand long until he drops to his knees, then flat on to the ground. You exit the arena and the entry attendant throws your a bag of coins.Entry Attendant- \"Spectacular show, sir!  Best we’ve seen in ages!  Please do come back, consider you an honored guest here!\"";
+		choiceArray[40][0] = "Ask about  Amor.";
+	
+		promptArray[41] = "Entry attendant-  \"Well, you’ve really helped me out with pleasing some fans, I wouldn’t mind throwing you some information. About two years ago a young man named, \"Amor Fati\", did in fact roll through here. He, like you, put on a great show. Everyone was surprised about his ability at such a young age. To think, a 16 year old could take on five of our best fighters and not even get a single scratch. A prodigy I’d say! After that he took off Natten.\" He nods toward the east. \"He probably isn’t there anymore, but it’d be a good place to start.\"";
+		choiceArray[41][0] = "Head towards the east.";
+		
+		promptArray[42] = "You walk towards the east. Along the way, you pass back by the cave and Seabreeze Village. You make sure to stay far away from the village to avoid contact. As you approach Natten, you are stopped by the Ztezi Swamp.";
+		choiceArray[42][0] = "Continue.";
+		
+		promptArray[43] = "As you enter the swamp, the stench of rotting wood and stagnant water bombards your face, causing your stomach to churn in an unsettling way. You press forward into the swamp, the feeling of vomit approaching closer and closer the deeper you go in.Borale- \"You might want to hold up. There’s something ahead.\"";
+		choiceArray[43][0] = "Stop according to Borale’s request.";
+		choiceArray[43][1] = "Continue on.";
+		
+		promptArray[44] = "You heed Borale’s advice and stop. You sense something off about this place. The water begins to move in an unnatural way, you instantly take a defensive stance. The water’s surface breaks revealing an eight foot tall half alligator half man beast, claws sharp enough to tear through the toughest armor. His scaled skin appears stronger than anything you’ve ever seen. His eyes glow red and his mouth agape poised to sink its teeth into the next thing he sees.";
+		choiceArray[44][0] = "[Str > 11] Fight";
+		choiceArray[44][1] = "[Dex > 11] Run";
+		choiceArray[44][2] = "[Int > 11] Talk to";
+		choiceArray[44][3] = "Ask Borale for advice";
+
+		promptArray[45] = "You continue forward, ignoring Borale’s advice. You step into a deeper water and when you do, the water seemingly engulfs you. In an instant all you can see in a tornado of water surrounding you, followed by glowing red eyes. Everything begins to turn red the quickly fades to black.";
+		choiceArray[45][0] = "FAIL_STATE";
+
+		promptArray[46] = "The creature appears poised to attack, but you don’t intend to let him move first. You dash forward at the beast, meeting his right hook with your dagger. You immediately fly backwards by the force of his strength. He makes the next move, dashing towards you this time. Realizing you can’t take him head on you duck under his repeated right hook and return with a double handed stab to his kidney.  As the dagger connected, the metal snaps like a twig against his defense.";
+		choiceArray[46][0] = "[Fight] \"I’m not done with you yet!\"";
+		choiceArray[46][1] = "Run";
+
+		promptArray[47] = "You realize that this beast is leaps and bounds above your ability and you hurl your dagger at it as a distraction to flee";
+		choiceArray[47][0] = "Continue";
+
+		promptArray[48] = "You realize that this beast is a humanoid, meaning that it likely can speak common.  You put your dagger on the ground and speak, \"I don’t mean you any harm.  Let’s talk about this civilly.  I am only passing through.\"  The beast cocks it’s head back and replies \"It’s just me and MY swamp!\"  The beast rushes you.";
+		choiceArray[48][0] = "Defend yourself.";
+		choiceArray[48][1] = "Run.";
+
+		promptArray[49] = "You ask Borale for what to do in this situation. Borale- \"Well, I wouldn’t advice fighting that… thing.\"";
+		choiceArray[49][0] = "[Str > 11] Fight";
+		choiceArray[49][1] = "[Dex > 11] Run";
+		choiceArray[49][2] = "[Int > 11] Talk to";
+		choiceArray[49][3] = "Ask Borale for advice";
+
+		promptArray[50] = "You run back at the beast unarmed, but with the courage of a true warrior. Unfortunately, it only took the one swipe to end it all.";
+		choiceArray[50][0] = "FAIL_STATE";
+
+		promptArray[51] = "You decide it is best not to engage the beast further and you book it to get out of the swamp. You take a quick look back and the beast has not given chase. You exit the swamp.";
+		choiceArray[51][0] = "Continue";
+
+		promptArray[52] = "Your dagger made for a great distraction and you escape with ease. You exit the swamp.";
+		choiceArray[52][0] = "Continue";
+
+		promptArray[53] = "The beast passes ground quickly and is in your face in a fraction of a second. Your frail body doesn’t put up any resistance for the swipe of his claw.";
+		choiceArray[53][0] = "FAIL_STATE";
+
+		promptArray[54] = "As you exit the swamp you follow the path east and arrive at Natten. The town only features two buildings: the tavern and the blacksmith’s shop. The blacksmith is outside forging some sort of farm equipment. He looks up at your arrival and gives a nasty glare. The tavern appears to be a bit run down, but clearly houses many people often. You look out to the rest of the town to see a field of crops, almost in season. There is one farmer walking in the crops, appearing to be checking it out.";
+		choiceArray[54][0] = "Talk to the smithy.";
+		choiceArray[54][1] = "Go to the Tavern.";
+		choiceArray[54][2] = "Talk to the Farmer.";
+
+		promptArray[55] = "You walk up to the blacksmith. He is eyeballing you from head to toe, probably drawing an opinion about you.";
+		choiceArray[55][0] = "\"I lost my dagger in the Zetzi Swamp back there, I don’t suppose there is a way I can get a sword from you?\"";
+
+		promptArray[56] = "You head to the tavern. The door creaks as you walk in. You see a couple tables with only one chair. The wooden floors are caked with dried mud. You see a couple farmers sitting on the floor in the corner. Across the room lies a staircase to the second floor with a bar next to it. Tavern Keeper looks at you with expectant eyes as you draw near.";
+		choiceArray[56][0] = "\"What do you have for sale?\"";
+		choiceArray[56][1] = "\"How are you?\"";
+		choiceArray[56][2] = "\"Do you have a room I can stay in for the night?\"";
+
+		promptArray[57] = "You head over to the fields and call out to the farmer. He looks up and nods his head, moving forward.Farmer- \"Hey, how ya doin’? We don’t see many new folk around here with the swamp so close. Are you just passin’ through or ya here to the smithy shop?\"";
+		choiceArray[57][0] = "\"I’m just passing through.\"";
+		choiceArray[57][1] = "\"I’m in need of a sword.\"";
+		choiceArray[57][2] = "\"I’m actually walking around the countryside helping people out in need. I don’t suppose I could give you a hand?\"";
+		choiceArray[57][3] = "Throw some dirt in his eyes and walk away.";
+
+		promptArray[58] = "Blacksmith- \"I’m not gonna make it for you. I only make farm tools and not for outsiders.\" The Blacksmith turns away and continues working on this project.";
+		choiceArray[58][0] = "Leave, there’s nothing else to do here.";
+
+		promptArray[59] = "Tavern Keeper- \"Well, the season hasn’t been too good on us this year. We have a few kegs of ale and some tomatoes to eat.\"";
+		choiceArray[59][0] = "\"I’ll take some ale.\"";
+		choiceArray[59][1] = "\"I’ll take some tomatoes.\"";
+		choiceArray[59][2] = "I don’t need anything.";
+
+		promptArray[60] = "Tavern Keeper- \"I’m doing well. Not much business besides locals. It’s nice to just relax and enjoy yourself.\"";
+		choiceArray[60][0] = "Continue";
+
+		promptArray[61] = "Tavern Keeper- \"Yes, we have two rooms upstairs. I will book you one for the night.\"";
+		choiceArray[61][0] = "\"I’ll actually take both.\"";
+		choiceArray[61][1] = "\"Alright.\"";
+
+		promptArray[62] = "Farmer- \"Oh, just passin’ through? No one ever stays here to chat with me anymore…\"";
+		choiceArray[62][0] = "Continue";
+
+		promptArray[63] = "Farmer- \"If you need a sword, our smithy is one of the best smiths in Dies Natalia. He doesn’t ever seem to make weapons anymore, let alone sell to outsiders.\"";
+		choiceArray[63][0] = "Continue";
+
+		promptArray[64] = "Farmer- \"Oh, sure!  We are always looking for people to lend a hand.\" You help the farmer maintain the crops.";
+		choiceArray[64][0] = "\"Have you heard anything about Amor Fati? He’s my son and I heard he came through here a bit ago.\"";
+
+		promptArray[65] = "You throw dirt in the farmer’s and walk away. You hear the farmer cursing you as you leave. You don’t care.";
+		choiceArray[65][0] = "Continue";
+
+		promptArray[66] = "You sprint past the beast and make it out of the swamp.";
+		choiceArray[66][0] = "Continue";
+
+		promptArray[67] = "You get some Ale and drink it.  It doesn’t have much effect.";
+		choiceArray[67][0] = "Continue";
+
+		promptArray[68] = "You get a couple tomatoes. You eat the raw. They’re not too bad, actually.";
+		choiceArray[68][0] = "Continue";
+
+		promptArray[69] = "Tavern Keeper- \"Alright, I’ll reserve them for you.\"";
+		choiceArray[69][0] = "Continue";
+
+		promptArray[70] = "Tavern Keeper- \"Alright, I’ll reserve it for you.\"";
+		choiceArray[70][0] = "Continue";
+
+		promptArray[71] = "The night creeps in and you return to your room. Your room has a straw bed on the floor with a blanket on top. Across the room holds an open window. It is a nice night.";
+		choiceArray[71][0] = "Look out the window.";
+		choiceArray[71][1] = "Go to sleep.";
+
+
+		promptArray[72] = "You lay down on your bed, but can’t seem to drift into sleep.";
+		choiceArray[72][0] = "Continue";
+
+		promptArray[73] = "You look out the window. You can see across the crop fields and into the distance.  You can see the sun’s rays just barely over the edge of the ocean. You remember what the farmer said about Amor visiting the blacksmith. You glance over at the blacksmith’s shop and notice a dim blue aura.";
+		choiceArray[73][0] = "Investigate.";
+
+		promptArray[74] = "";
+		choiceArray[74][0] = "Continue";
+
+		promptArray[75] = "";
+		choiceArray[75][0] = "Continue";
+
+		promptArray[76] = "";
+		choiceArray[76][0] = "Continue";
+
+		promptArray[77] = "";
+		choiceArray[77][0] = "Continue";
+
+		promptArray[78] = "";
+		choiceArray[78][0] = "Continue";
+
+		promptArray[79] = "";
+		choiceArray[79][0] = "Continue";
+
+		promptArray[80] = "";
+		choiceArray[80][0] = "Continue";
+
+		promptArray[81] = "";
+		choiceArray[81][0] = "Continue";
+
+		promptArray[82] = "";
+		choiceArray[82][0] = "Continue";
+
+		promptArray[83] = "";
+		choiceArray[83][0] = "Continue";
+
+		promptArray[84] = "";
+		choiceArray[84][0] = "Continue";
+
+		promptArray[85] = "";
+		choiceArray[85][0] = "Continue";
+
+		promptArray[86] = "";
+		choiceArray[86][0] = "Continue";
+
+		promptArray[87] = "";
+		choiceArray[87][0] = "Continue";
+
+		promptArray[88] = "";
+		choiceArray[88][0] = "Continue";
+
+		promptArray[89] = "";
+		choiceArray[89][0] = "Continue";
+
+		promptArray[90] = "";
+		choiceArray[90][0] = "Continue";
+
+		promptArray[91] = "";
+		choiceArray[91][0] = "Continue";
+
+		promptArray[92] = "";
+		choiceArray[92][0] = "Continue";
+
+		promptArray[93] = "";
+		choiceArray[93][0] = "Continue";
+
+		promptArray[94] = "";
+		choiceArray[94][0] = "Continue";
+
+		promptArray[95] = "";
+		choiceArray[95][0] = "Continue";
+
+		promptArray[96] = "";
+		choiceArray[96][0] = "Continue";
+
+		promptArray[97] = "";
+		choiceArray[97][0] = "Continue";
+
+		promptArray[98] = "";
+		choiceArray[98][0] = "Continue";
+
+		promptArray[99] = "";
+		choiceArray[99][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[100] = "";
+		choiceArray[100][0] = "Continue";
+
+		promptArray[999] = "You have failed your quest of fate";
+		choiceArray[999][0] = "Restart";
+
 
 	}
 	public void runPrologue(){
@@ -269,11 +592,10 @@ class Interact {
 			case 25:
 				if(response == 1){
 					arrayLocation = 26;
-					thePlayer.changeMorality(-2);
+					thePlayer.changeMorality(-1);
 				}
 				if(response == 2){
 					arrayLocation = 26;
-					thePlayer.changeMorality(-1);
 				}
 				if(response == 3){
 					arrayLocation = 27;
@@ -313,12 +635,262 @@ class Interact {
 					thePlayer.changeIntelect(1);
 				}
 				break;
-				
-				
-				
-				
-				
-				
+			case 31: arrayLocation = 34; break;
+			case 32: arrayLocation = 34;
+			case 33: arrayLocation = 34;
+			case 34:
+				if(response == 1){
+					arrayLocation = 35;
+				}
+				if(response == 2){
+					arrayLocation = 36;
+				}
+				break;
+			case 35: arrayLocation = 36; break;
+			case 36: 
+				if(response == 1){
+					arrayLocation = 37;
+				}
+				if(response == 2){
+					arrayLocation = 38;
+				}
+				break;
+			case 37: arrayLocation = 38; break;
+			case 38:
+				if(response == 1){
+					arrayLocation = 39;
+					thePlayer.changeMorality(-1);
+				}
+				if(response == 2){
+					arrayLocation = 40;
+					thePlayer.changeMorality(1);
+				}
+				break;
+			case 39: arrayLocation = 41; break;
+			case 40: arrayLocation = 41; break;
+			case 41: arrayLocation = 42; break;
+			case 42: arrayLocation = 43; break;
+			case 43: 
+				theUI.setArt("swamp.jpg");
+				if(response == 1){
+					arrayLocation = 44;
+				}
+				if(response == 2){
+					arrayLocation = 45;
+				}
+				break;
+			case 44: 
+				if(response == 1){
+					if(thePlayer.getStrength() > 9){
+						arrayLocation = 46;
+						thePlayer.changeMorality(1);
+					}else{
+						arrayLocation = 44;
+						thePlayer.changeIntelect(-1);
+					}
+				}
+				if(response == 2){
+					if(thePlayer.getDexterity() > 9){
+						arrayLocation = 47;
+						thePlayer.changeMorality(1);
+					}else{
+						arrayLocation = 44;
+						thePlayer.changeIntelect(-1);
+					}
+				}
+				if(response == 3){
+					if(thePlayer.getIntelect() > 9){
+						arrayLocation = 48;
+						thePlayer.changeMorality(1);
+					}else{
+						arrayLocation = 44;
+						thePlayer.changeIntelect(-1);
+					}
+				}
+				if(response == 4){
+					arrayLocation = 49;
+					thePlayer.changeMorality(-1);
+				}
+				break;
+				case 45:
+					arrayLocation = 999;
+					break;
+				case 46:
+					if(response == 1){
+						arrayLocation = 50;
+					}
+					if(response == 2){
+						arrayLocation = 51;
+					}
+					break;
+				case 47: arrayLocation = 52; break;
+				case 48:
+					if(response == 1){
+						arrayLocation = 53;
+					}
+					if(response == 2){
+						arrayLocation = 51;
+					}
+					break;
+				case 49:
+					if(response == 1){
+						if(thePlayer.getStrength() > 9){
+							arrayLocation = 46;
+						}else{
+							arrayLocation = 44;
+						}
+					}
+					if(response == 2){
+						if(thePlayer.getDexterity() > 9){
+							arrayLocation = 47;
+						}else{
+							arrayLocation = 44;
+						}
+					}
+					if(response == 3){
+						if(thePlayer.getIntelect() > 9){
+							arrayLocation = 48;
+						}else{
+							arrayLocation = 44;
+						}
+					}
+					if(response == 4){
+						arrayLocation = 49;
+					}
+					break;
+				case 50: arrayLocation = 999; break;
+				case 51: arrayLocation = 54; break;
+				case 52: arrayLocation = 54; break;
+				case 53: arrayLocation = 999; break;
+				case 54:
+					theUI.setArt("circle2.jpg");
+					if(response == 1){
+						arrayLocation = 55;
+					}
+					if(response == 2){
+						arrayLocation = 56;
+					}
+					if(response == 3){
+						arrayLocation = 57;
+					}
+					break;
+				case 55: arrayLocation = 58;
+				case 56: 
+					if(response == 1){
+						arrayLocation = 59;
+					}
+					if(response == 2){
+						arrayLocation = 60;
+					}
+					if(response == 3){
+						arrayLocation = 61;
+					}
+					break;
+				case 57:
+					if(response == 1){
+						arrayLocation = 62;
+					}
+					if(response == 2){
+						arrayLocation = 63;
+					}
+					if(response == 3){
+						arrayLocation = 64;
+						thePlayer.changeMorality(1);
+					}
+					if(response == 4){
+						arrayLocation = 65;
+						thePlayer.changeMorality(-1);
+					}
+					break;
+				case 58: arrayLocation = 59; break;
+				case 59: 
+					if(response == 1){
+						arrayLocation = 67;
+					}
+					if(response == 2){
+						arrayLocation = 68;
+					}
+					if(response == 3){
+						arrayLocation = 56;
+					}
+					break;
+				case 60: arrayLocation = 56; break;
+				case 61: arrayLocation = 69; break;
+				case 62: arrayLocation = 57; break;
+				case 63: arrayLocation = 58; break;
+				case 64: arrayLocation = 74; break;
+				case 65: arrayLocation = 54; break;
+				case 66: arrayLocation = 59; break;
+				case 67: arrayLocation = 59; break;
+				case 68: arrayLocation = 59; break;
+				case 69: arrayLocation = 71; break;
+				case 70: arrayLocation = 71; break;
+				case 71: 
+					if(response == 1){
+						arrayLocation = 73;
+					}
+					if(response == 2){
+						arrayLocation = 72;
+					}
+					break;
+				case 72: arrayLocation = 71; break;
+				case 73: arrayLocation = 75; break;
+				case 74: arrayLocation = 54; break;
+				case 75:
+					if(response == 1){
+						if(thePlayer.getDexterity() > 12){
+							arrayLocation = 76;
+						}else{
+							arrayLocation = 75;
+						}
+					}
+					if(response == 2){
+						if(thePlayer.getStrength() > 12){
+							arrayLocation = 77;
+						}else{
+							arrayLocation = 75;
+						}
+					}
+					if(response == 3){
+						if(thePlayer.getIntelect() > 12){
+							arrayLocation = 78;
+						}else{
+							arrayLocation = 75;
+						}
+					}
+					if(response == 4){
+						arrayLocation = 79;
+					}
+					break;
+				case 76: arrayLocation = 80; break;
+				case 77: arrayLocation = 80; break;
+				case 78: arrayLocation = 80; break;
+				case 79: arrayLocation = 80; break;
+				case 80:
+					if(response == 1){
+						arrayLocation = 81;
+						thePlayer.changeStrength(1);
+					}
+					if(response == 2){
+						arrayLocation = 82;
+						thePlayer.changeDexterity(1);
+					}
+					if(response == 3){
+						arrayLocation = 83;
+						thePlayer.changeIntelect(1);
+					}
+					if(response == 4){
+						arrayLocation = 84;
+					}
+					break;
+					
+				case  999:
+					arrayLocation = 0;
+					thePlayer.dexterity = 10;
+					thePlayer.intelect = 10;
+					thePlayer.morality = 20;
+					thePlayer.strength = 10;
+					break;
 			}	
 		}
 	}

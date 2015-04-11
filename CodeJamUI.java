@@ -23,7 +23,7 @@ public class CodeJamUI {
 	JFrame frame;
 	JPanel artPanel, infoPanel, controlPanel, promptPanel, choicePanel, controlBackground;
 	JScrollPane promptScroll;
-	JLabel choice1, choice2, choice3, choice4;
+	JLabel choice1, choice2, choice3, choice4, picLabel;
 	JTextArea promptText;
 	GridBagConstraints frameConstraints, controlConstraints;
 	
@@ -51,7 +51,8 @@ public class CodeJamUI {
 
 		frame.add(artPanel, frameConstraints);
 		
-		JLabel picLabel = new JLabel(new ImageIcon(loadImage("test.jpg", 945, 500)));
+		setArt("test.jpg");
+		
 		artPanel.add(picLabel);
 	}
 
@@ -256,6 +257,10 @@ public class CodeJamUI {
 		promptText.setText("WOWOWOWOWOWOWWOWOWO");
 	}
 
+	protected void setArt(String pictureName){
+		picLabel = new JLabel(new ImageIcon(loadImage(pictureName, 945, 500)));
+	}
+	
 	private void createPromptPanel() {
 		promptPanel = new JPanel();
 		promptPanel.setPreferredSize(promptPanel.getPreferredSize());

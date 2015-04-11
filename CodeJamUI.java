@@ -10,6 +10,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -304,13 +305,9 @@ public class CodeJamUI {
 	}
 	
 	protected void setMap(String mapName){
-<<<<<<< HEAD
-		mapLabel = new JLabel(new ImageIcon(loadImage(mapName, 325, 275)));
-=======
 		mapPanel.removeAll();
 		mapLabel = new JLabel(new ImageIcon(loadImage(mapName, 325, 275)));
 		mapPanel.add(mapLabel);
->>>>>>> NathanielBranch
 		mapPanel.revalidate();
 		mapPanel.repaint();
 		
@@ -365,17 +362,6 @@ public class CodeJamUI {
 		frame.setVisible(true);
 	}
 		
-<<<<<<< HEAD
-	private BackgroundPanel loadImage(String pictureName) throws MalformedURLException, IOException{
-		ClassLoader loader = CodeJamUI.class.getClassLoader();
-        URL classLocation = loader.getResource("CodeJamUI.class");
-        String classLocationToString = classLocation.toString();
-        String location = classLocationToString.substring(0, classLocationToString.length() - 11) + pictureName;
-        Image returnImage = ImageIO.read(new URL(location));
-        BackgroundPanel returnPanel = new BackgroundPanel(returnImage, BackgroundPanel.SCALED, 0.0f, 0.0f);
-        returnPanel.setPreferredSize(artPanel.getPreferredSize());
-        return returnPanel;
-=======
 	private Image loadImage(String pictureName, int width, int height){
 		ClassLoader loader = CodeJamUI.class.getClassLoader();
         String classLocationToString = loader.getResource("CodeJamUI.class").toString();
@@ -388,6 +374,5 @@ public class CodeJamUI {
 			e.printStackTrace();
 		}
         return returnImage;
->>>>>>> NathanielBranch
 	}
 }

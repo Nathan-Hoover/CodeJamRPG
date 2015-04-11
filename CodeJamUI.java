@@ -176,7 +176,7 @@ public class CodeJamUI {
 		dexterityProgress  = new JLabel();
 		dexterityProgress.setBackground(Color.DARK_GRAY);
 		
-		moralityProgress  = new JProgressBar(0, 40);
+		moralityProgress  = new JProgressBar(0, 10);
 
 		statusPanel.setPreferredSize(statusPanel.getPreferredSize());
 		
@@ -494,5 +494,70 @@ public class CodeJamUI {
 			e.printStackTrace();
 		}
         return returnImage;
+	}
+
+	public void blackPanel(String string) {
+		JPanel titleScreenPanel = new JPanel();
+		titleScreenPanel.setLayout(new GridBagLayout());
+		titleScreenPanel.setBackground(Color.BLACK);
+		
+		GridBagConstraints titleScreenConstraints = new GridBagConstraints();
+		titleScreenConstraints.fill = GridBagConstraints.BOTH;
+		titleScreenConstraints.gridx = 0;
+		titleScreenConstraints.gridy = 0;
+		titleScreenConstraints.weightx = 1.0;
+		titleScreenConstraints.weighty = 0.70;
+		
+		JLabel title = new JLabel(string, SwingConstants.CENTER);
+		title.setFont(new Font("Serif", Font.PLAIN, 100));
+		title.setForeground(Color.white);
+		JLabel by = new JLabel("BY: Nathaniel Hoover, Brandon Bauman, Wes Letcher", SwingConstants.CENTER);
+		by.setFont(new Font("Serif", Font.PLAIN, 40));
+		by.setForeground(Color.white);
+		JLabel startLabel = new JLabel("Restart Game", SwingConstants.CENTER);
+		startLabel.setFont(new Font("Serif", Font.PLAIN, 40));
+		startLabel.setBackground(Color.white);
+		startLabel.setForeground(Color.white);
+		
+		startLabel.addMouseListener(new MouseListener() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				artPanel.setVisible(true);
+				infoPanel.setVisible(true);
+				controlPanel.setVisible(true);
+				titleScreenPanel.setVisible(false);
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {	
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent e) {	
+			}
+        });
+		
+		titleScreenPanel.add(title, titleScreenConstraints);
+		titleScreenConstraints.gridy = 1;
+		titleScreenPanel.add(by, titleScreenConstraints);
+		titleScreenConstraints.gridy = 2;
+		titleScreenConstraints.gridheight = 2;
+		titleScreenPanel.add(startLabel, titleScreenConstraints);
+		
+		frameConstraints.fill = GridBagConstraints.BOTH;
+		frameConstraints.gridx = 0;
+		frameConstraints.gridy = 0;
+		frameConstraints.weightx = 1.0;
+		frameConstraints.weighty = 1.0;
+		
+		frame.add(titleScreenPanel, frameConstraints);
 	}
 }

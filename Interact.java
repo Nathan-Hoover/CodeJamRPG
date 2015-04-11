@@ -64,10 +64,10 @@ class Interact {
 		choiceArray[3][0] = "Move closer";
 		choiceArray[3][1] = "Amor, go check the light out.  I'll watch your back.";
 		
-		promptArray[4] = "Your curiosity gets the better of you and yo umove closer to the glowing light.";
+		promptArray[4] = "Your curiosity gets the better of you and you move closer to the glowing light.";
 		choiceArray[4][0] = "Continue";
 		
-		promptArray[5] = "You should Amor forward towards the light.  After a short pause, you move forward as well.";
+		promptArray[5] = "You shoved Amor forward towards the light.  After a short pause, you move forward as well.";
 		choiceArray[5][0] = "Continue.";
 		
 		promptArray[6] = "Upon closer inspection, the light seems to be emanating from a group of people huddling closely together in a small clearing.  There is a faint whisper in the air, most akin to a chant, coming from the direction.";
@@ -89,8 +89,8 @@ class Interact {
 		
 		promptArray[11] = "You find the next person who comes by, an elderly woman with well developed muscles, carrying a few large wooden planks.  Clearly, she has been a fisherman for the majority of her life.";
 		choiceArray[11][0] = "\"Excuse me, do you know where I am?\"";
-		choiceArray[11][0] = "[Str] Offer to help carry the planks.";
-		choiceArray[11][0] = "Kick her over";
+		choiceArray[11][1] = "[Str] Offer to help carry the planks.";
+		choiceArray[11][2] = "Kick her over";
 		
 		promptArray[12] = "Elder woman- \"Oh, this is Seabreeze Village.  We provide almost all of the fish in Dies Natalis.  I haven’t seen you around here, where are you from?\"";
 		choiceArray[12][0] = "\"I’m not sure, last I remember I was out hunting with my son, Amor Fati.  Speaking of, have you seen him?\"";
@@ -118,7 +118,6 @@ class Interact {
 		
 		promptArray[19] = "Along the road you see something shining behind some trees a walkable distance away.  You move close and see that it is a cave.  From the mouth of the cave a blue tinted mist lingers.";
 		choiceArray[19][0] = "Take a look inside.";
-		choiceArray[19][1] = "Continue on to the city in the west.";
 		
 		promptArray[20] = "You decided to take a look into the cave.  As you walk in, the light quickly disappears, leaving you in pitch black darkness.  You feel a familiar chill in the air, slowly crawling up your legs as you descend deeper into the darkness.  Feeling your way through the cave you turn a corner to see a blue light down the way.  Reaching the light, you see five men in long, woven robes, each sporting a hemp rope around their waist.  Sorcerers.";
 		choiceArray[20][0] = "Continue.";
@@ -393,24 +392,47 @@ class Interact {
 		choiceArray[94][1] = "\"Who is Borale?\"";
 		choiceArray[94][2] = "Kill them!";
 
-		promptArray[95] = "";
-		choiceArray[95][0] = "Continue";
+		promptArray[95] = "Your vision blurs further and your vision tints red.  You can feel Borale taking over.  You don’t care.  These sorcerers have to die for what they did to you.  They took your Amor from you.You draw your axe.  The look of fear means nothing to you as you raise your axe in the air.";
+		choiceArray[95][0] = "End Game";
 
-		promptArray[96] = "";
-		choiceArray[96][0] = "Continue";
+		promptArray[96] = "One of the sorcerers steps forward.  \"My name is Letch.  I’ll tell you everything.  These circles are called conduits.  They create a barrier around The Citadel- the giant towering building in the distance.\" Letch points towards the south east at a giant segmented tower, separated into different levels of different sizes.  \"This barrier keeps people from coming into and out of The Citadel.  You see, The Citadel holds something that must never reach the outside hands.  It contains the souls of hundreds of thousands of people who were brutally killed specifically for these souls.  What's more is that The Citadel itself actually collects these souls.  Souls collected from The Citadel are able to be used to amplify a sorcerer’s powers exponentially.  Any sorcerer who gets their hands on them could end our world.  With the barrier in place, it is impossible to stop The Citadel from being used and from the souls being stolen.\"  ";
+		choiceArray[96][0] = "\"So then I need to set up the barrier again.\"";
+		choiceArray[96][1] = "Kill them!";
+				
+		promptArray[97] = "A sorcerer responds. Sorcerer2- “Borale is a murder who was inserted into your body because we thought you were dead.  Little did we know that you weren’t actually dead, just unconscious.  Apparently, he took over your body for five years before you got control again.";
+		choiceArray[97][0] = "\"What is this circle?\"";
 
-		promptArray[97] = "";
-		choiceArray[97][0] = "Continue";
-
-		promptArray[98] = "";
-		choiceArray[98][0] = "Continue";
-
-		promptArray[99] = "";
-		choiceArray[99][0] = "Continue";
-
-		promptArray[100] = "";
-		choiceArray[100][0] = "Continue";
-
+		promptArray[98] = "Letch- \"No, the problem is that a powerful sorcerer has already gotten inside The Citadel.  You took out all three conduits so it’s on you to stop him.\"  Letch looks a bit worried.";
+		choiceArray[98][0] = "\"It is my responsibility to stop him.\"";
+		choiceArray[98][1] = "\"I’ll see what I can do\"";
+		choiceArray[98][2] = "\"I’m not really interested, but I suppose I don’t have a choice.\"";
+				
+		promptArray[99] = "Letch- \"We can provide you with a teleport there with our conduit if that would be of use.\" ";
+		choiceArray[99][0] = "\"After my last experience with the conduit, I’m not too sure about that.\"";
+		choiceArray[99][0] = "\"Who do you think I am?  I can walk.\"";
+				
+		promptArray[100] = "Letch- \"If you won’t accept our teleportation, at least take this key.  It will get you into the gates at The Citadel.\"  Letch hands you a brass key.  You put it in your pocket.";
+		choiceArray[100][0] = "Head towards The Citadel";
+		
+		promptArray[101] = "You spend a few days making your way to The Citadel.  You arrive at a 15 foot tall wooden door.  The Citadel looms above, so far that the top seems to fade into the sky.  After staring for a bit, it almost feels like you’re going to fall into the sky. You shift your focus to the gate, its only notable feature being one small keyhole in the center of the left door.  You move forward and insert the brass key given to you by Letch into the hole.The door slowly creaks open.";
+		choiceArray[101][0] = "Enter The Citadel";
+		
+		promptArray[102] = "You enter a grand hall, filled with with vast rows and columns full of vials containing souls.  You can’t even begin to count how many there actually are, but if you and to guess it would likely be well over ten thousand.  In the back of the room you see a spiral staircase leading to the room.  It is likely that this powerful sorcerer is there.";
+		choiceArray[102][0] = "Head up the staircase";
+		
+		promptArray[103] = "You enter the very top of The Citadel.  The ground is flat, with an odd device above you.  It is reminiscent of a candle.  Across stands a figure, about the same size as you.  He is wearing a long, red robe with long crimson tassels hanging down from shoulder embroidery.  The embroidery features a gold phoenix.  His arms glow with heat emanating from them.  He turns around revealing himself to be Amor Fati, your son.";
+		choiceArray[103][0] = "Continue";
+		
+		promptArray[104] = "Amor- \"The ancient Sorcerers of Dies Natalis studied the stars hoping to learn the destiny of mankind. When they unexpectedly discovered that they could manipulate the stars trajectory, they learned that mankind needn’t merely abide by fate’s rules. ~became the authors of our own fate. We learned of the great responsibility that comes with commanding the destinies of others. In particular, we learned what incredible power was yielded by ending one’s fate preemptively.\"";
+		choiceArray[104][0] = "\"What does that have to do with anything? I never knew you to be fascinated with power. \"";
+	
+		promptArray[105] = "Amor - \"Isn’t it obvious? It’s mankind’s deepest desire to take control all that might inconvenience us at our whim?\"";
+		choiceArray[105][0] = "\"Amor, this is wrong, can’t you understand?  I raised you better than this.  Listen, we can go back to how it used to be.\"";
+		choiceArray[105][1] = "\"You’ve left me no choice.\" You grab your axe and rush Amor, laying him to the ground in one swift stroke.";
+		
+		promptArray[106] = "\"No, I haven’t heard anything about a cave.\"";
+		choiceArray[106][0] = "Continue";
+				
 		promptArray[999] = "You have failed your quest of fate";
 		choiceArray[999][0] = "Restart";
 
@@ -455,7 +477,7 @@ class Interact {
 					arrayLocation = 11;
 				}
 				if(response == 2){
-					arrayLocation = 12;
+					arrayLocation = 11;
 				}
 				break;
 			case 11:
@@ -510,9 +532,6 @@ class Interact {
 				if(response == 1){
 					arrayLocation = 20;
 				}
-				if(response == 2){
-					arrayLocation = 21;
-				}
 				break;
 			case 20: arrayLocation = 22; break;
 			case 22: arrayLocation++; break;
@@ -558,7 +577,7 @@ class Interact {
 					thePlayer.changeIntelect(1);
 				}
 				if(response == 3){
-					arrayLocation = 32;
+					arrayLocation = 106;
 					thePlayer.changeMorality(1);
 					thePlayer.changeDexterity(1);
 				}
@@ -709,10 +728,10 @@ class Interact {
 						arrayLocation = 49;
 					}
 					break;
-				case 50: arrayLocation = 999; break;
+				case 50: theUI.blackPanel("You Died"); arrayLocation = 999; break;
 				case 51: arrayLocation = 54; break;
 				case 52: arrayLocation = 54; break;
-				case 53: arrayLocation = 999; break;
+				case 53: theUI.blackPanel("You Died"); arrayLocation = 999; break;
 				case 54:
 					theUI.setArt("circle2.jpg");
 					theUI.setMap("mapPlaceHolder.jpg");
@@ -913,8 +932,61 @@ class Interact {
 					}
 					break;
 				case 95:
+					theUI.blackPanel("Manus Fati never found his son, Amor Fati.  He continued to live on the rest of his days without ever knowing what happened to his son. End.  Thanks for playing.");
+					break;
+				case 96:
+					if(response == 1){
+						arrayLocation = 98;
+					}
+					if(response == 2){
+						arrayLocation = 95;
+					}
+					break;
+				case 97:
+					if(response == 1){
+						arrayLocation = 96;
+					}
+					if(response == 2){
+						arrayLocation = 95;
+					}
+					break;
+				case 98:
+					if(response == 1){
+						arrayLocation = 99;
+						thePlayer.changeMorality(1);
+					}
+					if(response == 2){
+						arrayLocation = 99;
+					}
+					if(response == 3){
+						arrayLocation = 99;
+						thePlayer.changeMorality(-1);
+					}
+					break;
+				case 99:
+					if(response == 1){
+						arrayLocation = 100;
+					}
+					if(response == 2){
+						arrayLocation = 100;
+					}
+					break;
+				case 100: arrayLocation = 101; break;
+				case 101: arrayLocation = 102; break;
+				case 102: arrayLocation = 103; break;
+				case 103: arrayLocation = 104; break;
+				case 104: arrayLocation = 105; break;
+				case 105: 
+					if(thePlayer.getMorality() > 4){
+						theUI.blackPanel( "\"Amor, this is wrong, can’t you understand?  I raised you better than this.  Listen, we can go back to how it used to be.\"");
+					}else{
+						theUI.blackPanel("\"You’ve left me no choice.” You grab your axe and rush Amor, laying him to the ground in one swift stroke.\"");
+					}
+					break;
+				case 106: arrayLocation = 29; break;
 				
 				case  999:
+					theUI.setArt("forest3.jpg");
 					arrayLocation = 0;
 					thePlayer.dexterity = 10;
 					thePlayer.intelect = 10;

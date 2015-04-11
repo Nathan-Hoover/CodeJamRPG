@@ -2,9 +2,14 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Image;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -228,13 +233,14 @@ public class CodeJamUI {
 	}
 
 	protected void setChoices() {
-		// TODO Auto-generated method stub
-		
+		choice1.setText("FKLSNFLASF");
+		choice2.setText("asdfsdafasdfasd 1");
+		choice3.setText("sdfadsafadsfsa 2");
+		choice4.setText("Testisadfsfasdfasfsng 3");
 	}
 
 	protected void setPrompt() {
-		// TODO Auto-generated method stub
-		
+		promptText.setText("WOWOWOWOWOWOWWOWOWO");
 	}
 
 	private void createPromptPanel() {
@@ -281,4 +287,14 @@ public class CodeJamUI {
 		frame.setVisible(true);
 	}
 		
+	private BackgroundPanel loadImage(String pictureName) throws MalformedURLException, IOException{
+		ClassLoader loader = CodeJamUI.class.getClassLoader();
+        URL classLocation = loader.getResource("CodeJamUI.class");
+        String classLocationToString = classLocation.toString();
+        String location = classLocationToString.substring(0, classLocationToString.length() - 11) + pictureName;
+        Image returnImage = ImageIO.read(new URL(location));
+        BackgroundPanel returnPanel = new BackgroundPanel(returnImage, BackgroundPanel.SCALED, 0.0f, 0.0f);
+        returnPanel.setPreferredSize(artPanel.getPreferredSize());
+        return returnPanel;
+	}
 }

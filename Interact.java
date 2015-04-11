@@ -517,6 +517,7 @@ class Interact {
 			case 20: arrayLocation = 22; break;
 			case 22: arrayLocation++; break;
 			case 23:
+				theUI.setMap("larcindor.jpg");
 				if(response == 1){
 					arrayLocation = 24;
 				}
@@ -539,11 +540,16 @@ class Interact {
 					thePlayer.changeDexterity(1);
 				}
 				break;
-			case 26: arrayLocation = 28; break;
+			case 26: 
+				theUI.setMap("mapPlaceHolder.jpg");
+				arrayLocation = 28; break;
 			case 27: arrayLocation = 26; break;
-			case 28: arrayLocation = 29; break;
+			case 28: 
+				theUI.setMap("mapPlaceHolder.jpg");
+				arrayLocation = 29; break;
 			case 29:
 				theUI.setArt("arena.jpg");
+				theUI.setMap("arenaGuy.jpg");
 				if(response == 1){
 					arrayLocation = 30;
 				}
@@ -582,7 +588,9 @@ class Interact {
 					arrayLocation = 36;
 				}
 				break;
-			case 35: arrayLocation = 36; break;
+			case 35: 
+				theUI.setMap("borale.jpg");
+				arrayLocation = 36; break;
 			case 36: 
 				if(response == 1){
 					arrayLocation = 37;
@@ -602,10 +610,16 @@ class Interact {
 					thePlayer.changeMorality(1);
 				}
 				break;
-			case 39: arrayLocation = 41; break;
-			case 40: arrayLocation = 41; break;
-			case 41: arrayLocation = 42; break;
-			case 42: arrayLocation = 43; break;
+			case 39: 
+				arrayLocation = 41; break;
+			case 40: 
+				arrayLocation = 41; break;
+			case 41: 
+				theUI.setMap("arenaGuy.jpg");
+				arrayLocation = 42; break;
+			case 42: 
+				theUI.setMap("mapPlaceHolder.jpg");
+				arrayLocation = 43; break;
 			case 43: 
 				theUI.setArt("swamp.jpg");
 				if(response == 1){
@@ -616,6 +630,7 @@ class Interact {
 				}
 				break;
 			case 44: 
+				theUI.setMap("alligator.jpg");
 				if(response == 1){
 					if(thePlayer.getStrength() > 9){
 						arrayLocation = 46;
@@ -700,6 +715,7 @@ class Interact {
 				case 53: arrayLocation = 999; break;
 				case 54:
 					theUI.setArt("circle2.jpg");
+					theUI.setMap("mapPlaceHolder.jpg");
 					if(response == 1){
 						arrayLocation = 55;
 					}
@@ -710,8 +726,11 @@ class Interact {
 						arrayLocation = 57;
 					}
 					break;
-				case 55: arrayLocation = 58;
+				case 55: 
+					theUI.setMap("blacksmith.jpg");
+					arrayLocation = 58;
 				case 56: 
+					theUI.setMap("tavernKeeper.jpg");
 					if(response == 1){
 						arrayLocation = 59;
 					}
@@ -723,6 +742,7 @@ class Interact {
 					}
 					break;
 				case 57:
+					theUI.setMap("farmer.jpg");
 					if(response == 1){
 						arrayLocation = 62;
 					}
@@ -738,7 +758,9 @@ class Interact {
 						thePlayer.changeMorality(-1);
 					}
 					break;
-				case 58: arrayLocation = 59; break;
+				case 58: 
+					theUI.setMap("blacksmith.jpg");
+					arrayLocation = 54; break;
 				case 59: 
 					if(response == 1){
 						arrayLocation = 67;
@@ -762,6 +784,7 @@ class Interact {
 				case 69: arrayLocation = 71; break;
 				case 70: arrayLocation = 71; break;
 				case 71: 
+					theUI.setMap("mapPlaceHolder.jpg");
 					if(response == 1){
 						arrayLocation = 73;
 					}
@@ -803,6 +826,7 @@ class Interact {
 				case 78: arrayLocation = 80; break;
 				case 79: arrayLocation = 80; break;
 				case 80:
+					theUI.setMap("blacksmith.jpg");
 					if(response == 1){
 						arrayLocation = 81;
 						thePlayer.changeStrength(1);
@@ -825,6 +849,7 @@ class Interact {
 				case 84: arrayLocation = 85; break;
 				case 85: 
 					theUI.setArt("delapHouse.jpg");
+					theUI.setMap("mapPlaceHolder.jpg");
 					if(response == 1){
 						arrayLocation = 86;
 					}
@@ -848,6 +873,7 @@ class Interact {
 				case 89: arrayLocation = 91; break;
 				case 90: arrayLocation = 89; break;
 				case 91: 
+					theUI.setMap("sorcerer.jpg");
 					if(response == 1){
 						if(thePlayer.getStrength() > 12){
 							arrayLocation = 92;

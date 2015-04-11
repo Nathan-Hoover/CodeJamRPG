@@ -28,25 +28,31 @@ public int getDexterity()
 public int getMorality()
  */
 class Interact {
-	CodeJamUI theUI;
-	String[] promptArray = new String[1000];
-	String[][] choiceArray = new String[1000][4];
+	int response, arrayLocation;
+	private CodeJamUI theUI;
+	private Player thePlayer;
+	private String[] promptArray = new String[1000];
+	private String[][] choiceArray = new String[1000][4];
 	
 	public void setUI(){
 		theUI = main.theUI;
 	}
 	
-	public void prologueTest(){
+	public void setPlayer(){
+		thePlayer = main.thePlayer;
+	}
+	
+	public Interact(){
 		for(int i = 0; i < 1000; i++){
-			promptArray[i] = "";
+			promptArray[i] = " ";
 			for(int j = 0; j < 4; j++){
-				choiceArray[i][j] = "";
+				choiceArray[i][j] = " ";
 			}
 		}
 		promptArray[0] = "You, Manus Fati, have decided to take your son, Amor Fati, on a hunting expedition for his 13th birthday to show him how to be a man.  After you grab your bow and sword, both of you leave your home to search for some game to bring home for dinner that evening.  Amor is a bit reluctant to go deep into the forest nearby because it is common to hear discomforting noises in the direction.";
 		choiceArray[0][0] = "Continue";
 		
-		promptArray[1] = "Amor - “Dad, I’m not too sure this is a good idea.  I’m not entirely sure that I’m ready.”";
+		promptArray[1] = "Amor - \"Dad, I'm not too sure this is a good idea.  I'm not entirely sure that I'm ready.\"";
 		choiceArray[1][0] = "Of course you are. Let's go.";
 		choiceArray[1][1] = "I don't care, you're coming.";
 		choiceArray[1][2] = "If you're not ready we can try for a different day.";
@@ -70,15 +76,84 @@ class Interact {
 		choiceArray[7][0] = "Attack them.";
 		choiceArray[7][1] = "Move closer.";
 		
-		promptArray[8] = "You begin to advance through the foliage.  As you exit the bushes, a blinding light explodes from the ground.  You feel a brief sense of weightlessness followed quickly by a thud.  Your head is splitting while you open your eyes.  You see a red stained world with Amor’s face filled with terror.  You manage to looked around to see one of the hooded sorcerer’s directly across from you as your vision fades to black. ";
+		promptArray[8] = "You begin to advance through the foliage.  As you exit the bushes, a blinding light explodes from the ground.  You feel a brief sense of weightlessness followed quickly by a thud.  Your head is splitting while you open your eyes.  You see a red stained world with Amorï¿½s face filled with terror.  You manage to looked around to see one of the hooded sorcererï¿½s directly across from you as your vision fades to black. ";
 		choiceArray[8][0] = "Continue.";
 		
 		
 	}
-
-	public void setResponse(int i) {
-		// TODO Auto-generated method stub
+	public void runPrologue(){
+		arrayLocation = 0;
+		theUI.setPrompt(promptArray[arrayLocation]);
+		theUI.setChoices(choiceArray[arrayLocation][0], choiceArray[arrayLocation][1], choiceArray[arrayLocation][2], choiceArray[arrayLocation][3]);
+		response = 0;
+		while(response == 0){
+			try {
+			       Thread.sleep(200);
+			    } catch(InterruptedException e) {
+			    }
+		}
+		if(response == 1){
+			
+		}
+		if(response == 2){
+			
+		}
+		if(response == 3){
+			
+		}
+		if(response == 4){
+			
+		}
 		
+		arrayLocation = 1;
+		theUI.setPrompt(promptArray[arrayLocation]);
+		theUI.setChoices(choiceArray[arrayLocation][0], choiceArray[arrayLocation][1], choiceArray[arrayLocation][2], choiceArray[arrayLocation][3]);
+		response = 0;
+		while(response == 0){
+			try {
+			       Thread.sleep(200);
+			    } catch(InterruptedException e) {
+			    }
+		}
+		if(response == 1){
+			
+		}
+		if(response == 2){
+			thePlayer.changeMorality(-1);
+		}
+		if(response == 3){
+			thePlayer.changeMorality(1);
+		}
+		if(response == 4){
+			
+		}
+		
+		arrayLocation = 2;
+		theUI.setPrompt(promptArray[arrayLocation]);
+		theUI.setChoices(choiceArray[arrayLocation][0], choiceArray[arrayLocation][1], choiceArray[arrayLocation][2], choiceArray[arrayLocation][3]);
+		response = 0;
+		while(response == 0){
+			try {
+			       Thread.sleep(200);
+			    } catch(InterruptedException e) {
+			    }
+		}
+		if(response == 1){
+			
+		}
+		if(response == 2){
+			
+		}
+		if(response == 3){
+			
+		}
+		if(response == 4){
+			
+		}
+	}
+	
+	public void setResponse(int i) {
+		response = i;
 	}
 	
 }

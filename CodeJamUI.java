@@ -302,7 +302,6 @@ public class CodeJamUI {
 		artPanel.add(picLabel);
 		artPanel.revalidate();
 		artPanel.repaint();
-		System.out.println(pictureName);
 	}
 	
 	protected void setMap(String mapName){

@@ -20,7 +20,11 @@ class Interact {
 	}
 	
 	public void test(){
+<<<<<<< HEAD
 		theUI.setArt("mapPlaceHolder.jpg");
+=======
+		theUI.setMap("mapPlaceHolder2.jpg");
+>>>>>>> NathanielBranch
 		System.out.println("I made it to the Interact");
 	}
 	

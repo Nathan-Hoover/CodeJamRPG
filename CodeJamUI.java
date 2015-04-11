@@ -304,7 +304,13 @@ public class CodeJamUI {
 	}
 	
 	protected void setMap(String mapName){
+<<<<<<< HEAD
 		mapLabel = new JLabel(new ImageIcon(loadImage(mapName, 325, 275)));
+=======
+		mapPanel.removeAll();
+		mapLabel = new JLabel(new ImageIcon(loadImage(mapName, 325, 275)));
+		mapPanel.add(mapLabel);
+>>>>>>> NathanielBranch
 		mapPanel.revalidate();
 		mapPanel.repaint();
 		

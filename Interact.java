@@ -96,7 +96,7 @@ class Interact {
 		choiceArray[12][0] = "\"I’m not sure, last I remember I was out hunting with my son, Amor Fati.  Speaking of, have you seen him?\"";
 		
 		promptArray[13] = "Elder woman- \"Oh how kind, here.\"  She hands you two of the planks. ";
-		choiceArray[13][0] = "\"So, do you know this is?\"";
+		choiceArray[13][0] = "\"So, do you know who Amor Fati is?\"";
 		choiceArray[13][1] = "Kick her over.";
 		
 		promptArray[14] = "You kick the elder woman, however she doesn’t budge.  She turns with an angry expression towards you, then transforming into a look of fear as she begins to run awayElder woman- \"Help! Help! It’s the murderer of tatters!\" She heads down the docks and as people begin to turn, you see their faces changing to looks of fear, despair, and hopelessness.";
@@ -208,7 +208,7 @@ class Interact {
 		choiceArray[44][3] = "Ask Borale for advice";
 
 		promptArray[45] = "You continue forward, ignoring Borale’s advice. You step into a deeper water and when you do, the water seemingly engulfs you. In an instant all you can see in a tornado of water surrounding you, followed by glowing red eyes. Everything begins to turn red the quickly fades to black.";
-		choiceArray[45][0] = "FAIL_STATE";
+		choiceArray[45][0] = "You Died";
 
 		promptArray[46] = "The creature appears poised to attack, but you don’t intend to let him move first. You dash forward at the beast, meeting his right hook with your dagger. You immediately fly backwards by the force of his strength. He makes the next move, dashing towards you this time. Realizing you can’t take him head on you duck under his repeated right hook and return with a double handed stab to his kidney.  As the dagger connected, the metal snaps like a twig against his defense.";
 		choiceArray[46][0] = "[Fight] \"I’m not done with you yet!\"";
@@ -228,7 +228,7 @@ class Interact {
 		choiceArray[49][3] = "Ask Borale for advice";
 
 		promptArray[50] = "You run back at the beast unarmed, but with the courage of a true warrior. Unfortunately, it only took the one swipe to end it all.";
-		choiceArray[50][0] = "FAIL_STATE";
+		choiceArray[50][0] = "You Died";
 
 		promptArray[51] = "You decide it is best not to engage the beast further and you book it to get out of the swamp. You take a quick look back and the beast has not given chase. You exit the swamp.";
 		choiceArray[51][0] = "Continue";
@@ -237,7 +237,7 @@ class Interact {
 		choiceArray[52][0] = "Continue";
 
 		promptArray[53] = "The beast passes ground quickly and is in your face in a fraction of a second. Your frail body doesn’t put up any resistance for the swipe of his claw.";
-		choiceArray[53][0] = "FAIL_STATE";
+		choiceArray[53][0] = "You Died";
 
 		promptArray[54] = "As you exit the swamp you follow the path east and arrive at Natten. The town only features two buildings: the tavern and the blacksmith’s shop. The blacksmith is outside forging some sort of farm equipment. He looks up at your arrival and gives a nasty glare. The tavern appears to be a bit run down, but clearly houses many people often. You look out to the rest of the town to see a field of crops, almost in season. There is one farmer walking in the crops, appearing to be checking it out.";
 		choiceArray[54][0] = "Talk to the smithy.";
@@ -468,11 +468,12 @@ class Interact {
 			case 5: arrayLocation++; break;
 			case 6: arrayLocation++; break;
 			case 7: arrayLocation++; break;
-			case 8: arrayLocation++; break;
+			case 8: theUI.setArt("fishing.jpg"); arrayLocation++; break;
 			case 9: arrayLocation++; 
 				theUI.setArt("fishing.jpg");
 				break;
 			case 10:
+				theUI.setMap("elderlywoman.jpg");
 				if(response == 1){
 					arrayLocation = 11;
 				}
@@ -522,11 +523,11 @@ class Interact {
 					arrayLocation = 17;
 				}
 				break;
-			case 16: arrayLocation = 17; break;
+			case 16: theUI.setMap("mapPlaceHolder.jpg"); arrayLocation = 17; break;
 			case 17: 
 				theUI.setMap("mapPlaceHolder.jpg");
 				arrayLocation = 18; break;
-			case 18: arrayLocation = 19; break;
+			case 18: theUI.setArt("cave.jpg"); arrayLocation = 19; break;
 			case 19: 
 				theUI.setArt("cave.jpg");
 				if(response == 1){
@@ -534,7 +535,7 @@ class Interact {
 				}
 				break;
 			case 20: arrayLocation = 22; break;
-			case 22: arrayLocation++; break;
+			case 22: theUI.setMap("larcindor.jpg"); arrayLocation++; break;
 			case 23:
 				theUI.setMap("larcindor.jpg");
 				if(response == 1){
@@ -546,6 +547,7 @@ class Interact {
 				break;
 			case 24: arrayLocation++; break;
 			case 25:
+				theUI.setMap("mapPlaceHolder.jpg");
 				if(response == 1){
 					arrayLocation = 26;
 					thePlayer.changeMorality(-1);
@@ -562,9 +564,10 @@ class Interact {
 			case 26: 
 				theUI.setMap("mapPlaceHolder.jpg");
 				arrayLocation = 28; break;
-			case 27: arrayLocation = 26; break;
+			case 27: theUI.setMap("mapPlaceHolder.jpg"); arrayLocation = 26; break;
 			case 28: 
-				theUI.setMap("mapPlaceHolder.jpg");
+				theUI.setArt("arena.jpg");
+				theUI.setMap("arenaGuy.jpg");
 				arrayLocation = 29; break;
 			case 29:
 				theUI.setArt("arena.jpg");
@@ -600,6 +603,7 @@ class Interact {
 			case 32: arrayLocation = 34;
 			case 33: arrayLocation = 34;
 			case 34:
+				theUI.setMap("borale.jpg");
 				if(response == 1){
 					arrayLocation = 35;
 				}
@@ -632,15 +636,16 @@ class Interact {
 			case 39: 
 				arrayLocation = 41; break;
 			case 40: 
+				theUI.setMap("arenaGuy.jpg");
 				arrayLocation = 41; break;
 			case 41: 
-				theUI.setMap("arenaGuy.jpg");
+				theUI.setMap("mapPlaceHolder.jpg");
 				arrayLocation = 42; break;
 			case 42: 
-				theUI.setMap("mapPlaceHolder.jpg");
+				theUI.setArt("swamp.jpg");
 				arrayLocation = 43; break;
 			case 43: 
-				theUI.setArt("swamp.jpg");
+				theUI.setMap("alligator.jpg");
 				if(response == 1){
 					arrayLocation = 44;
 				}
@@ -683,6 +688,7 @@ class Interact {
 				}
 				break;
 				case 45:
+					theUI.blackPanel("The End");
 					arrayLocation = 999;
 					break;
 				case 46:
@@ -731,7 +737,7 @@ class Interact {
 				case 50: theUI.blackPanel("You Died"); arrayLocation = 999; break;
 				case 51: arrayLocation = 54; break;
 				case 52: arrayLocation = 54; break;
-				case 53: theUI.blackPanel("You Died"); arrayLocation = 999; break;
+				case 53: theUI.setArt("circle2.jpg"); theUI.blackPanel("You Died"); arrayLocation = 999; break;
 				case 54:
 					theUI.setArt("circle2.jpg");
 					theUI.setMap("mapPlaceHolder.jpg");
@@ -801,7 +807,7 @@ class Interact {
 				case 67: arrayLocation = 59; break;
 				case 68: arrayLocation = 59; break;
 				case 69: arrayLocation = 71; break;
-				case 70: arrayLocation = 71; break;
+				case 70: theUI.setMap("mapPlaceHolder.jpg"); arrayLocation = 71; break;
 				case 71: 
 					theUI.setMap("mapPlaceHolder.jpg");
 					if(response == 1){
@@ -840,10 +846,10 @@ class Interact {
 						arrayLocation = 79;
 					}
 					break;
-				case 76: arrayLocation = 80; break;
-				case 77: arrayLocation = 80; break;
-				case 78: arrayLocation = 80; break;
-				case 79: arrayLocation = 80; break;
+				case 76: theUI.setMap("blacksmith.jpg");arrayLocation = 80; break;
+				case 77: theUI.setMap("blacksmith.jpg");arrayLocation = 80; break;
+				case 78: theUI.setMap("blacksmith.jpg");arrayLocation = 80; break;
+				case 79: theUI.setMap("blacksmith.jpg");arrayLocation = 80; break;
 				case 80:
 					theUI.setMap("blacksmith.jpg");
 					if(response == 1){
@@ -862,10 +868,14 @@ class Interact {
 						arrayLocation = 84;
 					}
 					break;
-				case 81: arrayLocation = 85; break;
-				case 82: arrayLocation = 85; break;
-				case 83: arrayLocation = 85; break;
-				case 84: arrayLocation = 85; break;
+				case 81: theUI.setArt("delapHouse.jpg");
+				theUI.setMap("mapPlaceHolder.jpg");arrayLocation = 85; break;
+				case 82: theUI.setArt("delapHouse.jpg");
+				theUI.setMap("mapPlaceHolder.jpg");arrayLocation = 85; break;
+				case 83: theUI.setArt("delapHouse.jpg");
+				theUI.setMap("mapPlaceHolder.jpg");arrayLocation = 85; break;
+				case 84: theUI.setArt("delapHouse.jpg");
+				theUI.setMap("mapPlaceHolder.jpg");arrayLocation = 85; break;
 				case 85: 
 					theUI.setArt("delapHouse.jpg");
 					theUI.setMap("mapPlaceHolder.jpg");
@@ -889,7 +899,7 @@ class Interact {
 					break;
 				case 87: arrayLocation = 89; break;
 				case 88: arrayLocation = 90; break;
-				case 89: arrayLocation = 91; break;
+				case 89: theUI.setMap("sorcerer.jpg");arrayLocation = 91; break;
 				case 90: arrayLocation = 89; break;
 				case 91: 
 					theUI.setMap("sorcerer.jpg");
@@ -972,8 +982,8 @@ class Interact {
 					}
 					break;
 				case 100: arrayLocation = 101; break;
-				case 101: arrayLocation = 102; break;
-				case 102: arrayLocation = 103; break;
+				case 101: theUI.setMap("mapPlaceHolder.jpg"); theUI.setArt("citadel1");arrayLocation = 102; break;
+				case 102: theUI.setArt("citadel2");arrayLocation = 103; break;
 				case 103: arrayLocation = 104; break;
 				case 104: arrayLocation = 105; break;
 				case 105: 
@@ -982,16 +992,13 @@ class Interact {
 					}else{
 						theUI.blackPanel("\"You’ve left me no choice.” You grab your axe and rush Amor, laying him to the ground in one swift stroke.\"");
 					}
+					arrayLocation = 999;
 					break;
 				case 106: arrayLocation = 29; break;
 				
 				case  999:
-					theUI.setArt("forest3.jpg");
-					arrayLocation = 0;
-					thePlayer.dexterity = 10;
-					thePlayer.intelect = 10;
-					thePlayer.morality = 20;
-					thePlayer.strength = 10;
+					theUI.blackPanel("THE END");
+					arrayLocation = 100000;
 					break;
 			}	
 		}

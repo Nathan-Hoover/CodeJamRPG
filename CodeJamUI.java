@@ -167,7 +167,7 @@ public class CodeJamUI {
 		choice1.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				theInteractions.test();
+				theInteractions.setResponse(1);
 			}
 
 			@Override
@@ -190,7 +190,7 @@ public class CodeJamUI {
 		choice2.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				setChoices("test","test","test","test");
+				theInteractions.setResponse(2);
 			}
 
 			@Override
@@ -213,7 +213,7 @@ public class CodeJamUI {
 		choice3.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				setPrompt("");
+				theInteractions.setResponse(3);
 			}
 
 			@Override
@@ -236,6 +236,7 @@ public class CodeJamUI {
 		choice4.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				theInteractions.setResponse(4);
 			}
 
 			@Override

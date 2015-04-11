@@ -38,5 +38,10 @@ class Interact {
 		theUI.setMap("mapPlaceHolder2.jpg");
 		System.out.println("I made it to the Interact");
 	}
+
+	public void setResponse(int i) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

@@ -76,61 +76,45 @@ class Interact {
 		choiceArray[7][0] = "Attack them.";
 		choiceArray[7][1] = "Move closer.";
 		
-		promptArray[8] = "You begin to advance through the foliage.  As you exit the bushes, a blinding light explodes from the ground.  You feel a brief sense of weightlessness followed quickly by a thud.  Your head is splitting while you open your eyes.  You see a red stained world with Amor�s face filled with terror.  You manage to looked around to see one of the hooded sorcerer�s directly across from you as your vision fades to black. ";
+		promptArray[8] = "You begin to advance through the foliage.  As you exit the bushes, a blinding light explodes from the ground.  You feel a brief sense of weightlessness followed quickly by a thud.  Your head is splitting while you open your eyes.  You see a red stained world with Amor's face filled with terror.  You manage to looked around to see one of the hooded sorcerer's directly across from you as your vision fades to black. ";
 		choiceArray[8][0] = "Continue.";
 		
 		
 	}
 	public void runPrologue(){
-		arrayLocation = 0;
-		theUI.setPrompt(promptArray[arrayLocation]);
-		theUI.setChoices(choiceArray[arrayLocation][0], choiceArray[arrayLocation][1], choiceArray[arrayLocation][2], choiceArray[arrayLocation][3]);
-		response = 0;
-		while(response == 0){
-			try {
-			       Thread.sleep(200);
-			    } catch(InterruptedException e) {
-			    }
-		}
-		if(response == 1){
-			
-		}
-		if(response == 2){
-			
-		}
-		if(response == 3){
-			
-		}
-		if(response == 4){
-			
-		}
+		loadArrayData(0);
 		
-		arrayLocation = 1;
-		theUI.setPrompt(promptArray[arrayLocation]);
-		theUI.setChoices(choiceArray[arrayLocation][0], choiceArray[arrayLocation][1], choiceArray[arrayLocation][2], choiceArray[arrayLocation][3]);
-		response = 0;
-		while(response == 0){
-			try {
-			       Thread.sleep(200);
-			    } catch(InterruptedException e) {
-			    }
-		}
-		if(response == 1){
-			
-		}
+		loadArrayData(1);
 		if(response == 2){
 			thePlayer.changeMorality(-1);
 		}
 		if(response == 3){
 			thePlayer.changeMorality(1);
 		}
-		if(response == 4){
-			
+		
+		loadArrayData(2);
+		
+		loadArrayData(3);
+		if(response == 1){
+			arrayLocation = 4;
+		}
+		if(response == 2){
+			arrayLocation = 5;
 		}
 		
-		arrayLocation = 2;
-		theUI.setPrompt(promptArray[arrayLocation]);
-		theUI.setChoices(choiceArray[arrayLocation][0], choiceArray[arrayLocation][1], choiceArray[arrayLocation][2], choiceArray[arrayLocation][3]);
+		loadArrayData(arrayLocation);
+		
+		loadArrayData(6);
+		
+		loadArrayData(7);
+		
+		loadArrayData(8);
+	}
+	
+	private void loadArrayData(int i) {
+		theUI.setStatus();
+		theUI.setPrompt(promptArray[i]);
+		theUI.setChoices(choiceArray[i][0], choiceArray[i][1], choiceArray[i][2], choiceArray[i][3]);
 		response = 0;
 		while(response == 0){
 			try {
@@ -138,20 +122,8 @@ class Interact {
 			    } catch(InterruptedException e) {
 			    }
 		}
-		if(response == 1){
-			
-		}
-		if(response == 2){
-			
-		}
-		if(response == 3){
-			
-		}
-		if(response == 4){
-			
-		}
 	}
-	
+
 	public void setResponse(int i) {
 		response = i;
 	}

@@ -14,15 +14,19 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.UIManager;
 
 public class CodeJamUI {
 	Interact theInteractions;
+	Player thePlayer;
 	JFrame frame;
 	JPanel artPanel, infoPanel, controlPanel, promptPanel, choicePanel, controlBackground, statusPanel, mapPanel;
+	JProgressBar moralityProgress;
 	JScrollPane promptScroll;
-	JLabel choice1, choice2, choice3, choice4, picLabel, mapLabel;
+	JLabel strengthProgress, intelectProgress, dexterityProgress, choice1, choice2, choice3, choice4, picLabel, mapLabel;
 	JTextArea promptText;
 	GridBagConstraints frameConstraints, controlConstraints;
 	
@@ -92,13 +96,46 @@ public class CodeJamUI {
 
 	private void createStatusPanel() {
 		statusPanel = new JPanel();
-		statusPanel.setBackground(Color.green);
+		statusPanel.setLayout(new GridBagLayout());
+		statusPanel.setBackground(Color.WHITE);
+		
+		strengthProgress = new JLabel(); 
+		strengthProgress.setBackground(Color.BLUE);
+		intelectProgress  = new JLabel();
+		intelectProgress.setBackground(Color.DARK_GRAY);
+		dexterityProgress  = new JLabel();
+		dexterityProgress.setBackground(Color.DARK_GRAY);
+		
+		moralityProgress  = new JProgressBar(0, 40);
+
+		statusPanel.setPreferredSize(statusPanel.getPreferredSize());
+		
+		GridBagConstraints statusPanelConstraints = new GridBagConstraints();
+		statusPanelConstraints.fill = GridBagConstraints.NONE;
+		statusPanelConstraints.gridx = 0;
+		statusPanelConstraints.gridy = 0;
+		statusPanelConstraints.weightx = 1.0;
+		statusPanelConstraints.weighty = 1.0;
+		
+		statusPanel.add(strengthProgress, statusPanelConstraints);
+		
+		statusPanelConstraints.gridx = 0;
+		statusPanelConstraints.gridy = 1;
+		statusPanel.add(intelectProgress, statusPanelConstraints);
+		
+		statusPanelConstraints.gridx = 0;
+		statusPanelConstraints.gridy = 2;
+		statusPanel.add(dexterityProgress, statusPanelConstraints);
+		
+		statusPanelConstraints.gridx = 0;
+		statusPanelConstraints.gridy = 3;
+		statusPanel.add(moralityProgress, statusPanelConstraints);
 		
 	}
 
 	private void createMapPanel() {
 		mapPanel = new JPanel();
-		mapPanel.setBackground(Color.DARK_GRAY);
+		mapPanel.setBackground(Color.BLACK);
 		mapPanel.setPreferredSize(mapPanel.getPreferredSize());
 		
 		setMap("mapPlaceHolder.jpg");
@@ -317,12 +354,24 @@ public class CodeJamUI {
 		theInteractions = main.theInteractions;
 	}
 	
+	public void setPlayer(){
+		thePlayer = main.thePlayer;
+	}
+	
+	public void setStatus(){
+		strengthProgress.setText("Strength: " + thePlayer.getStrength());
+		strengthProgress.setBackground(Color.DARK_GRAY);
+		intelectProgress.setText("Intelect: " + thePlayer.getIntelect());
+		dexterityProgress.setText("Dexterity: " + thePlayer.getDexterity());
+		moralityProgress.setValue(thePlayer.getMorality());
+	}
+	
 	private void createPromptPanel() {
 		promptPanel = new JPanel();
 		promptPanel.setPreferredSize(promptPanel.getPreferredSize());
 		promptPanel.setOpaque(false);
 		
-		promptText = new JTextArea("Hello World please be bigger ........Hello World please be bigger ........Hello World please be bigger ........Hello World please be bigger ........");
+		promptText = new JTextArea("");
 		promptText.setLineWrap(true);
 		promptText.setEditable(false);
 		
@@ -370,7 +419,6 @@ public class CodeJamUI {
 		try {
 			returnImage = ImageIO.read(new URL(location)).getScaledInstance(width, height, java.awt.Image.SCALE_SMOOTH);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         return returnImage;

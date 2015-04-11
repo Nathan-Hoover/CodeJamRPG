@@ -11,6 +11,7 @@ class main {
 			theUI = new CodeJamUI();
 			thePlayer = new Player();
 			
+			theUI.setPlayer();
 			theInteractions.setUI();
 			theUI.setInteract();
 			theInteractions.setPlayer();

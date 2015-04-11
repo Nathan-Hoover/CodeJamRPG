@@ -2,7 +2,7 @@ class Player {
 	public int strength = 10;
 	public int intelect = 10;
 	public int dexterity = 10;
-	public int morality = 0;
+	public int morality = 20;
 	
 	public void changeStrength(int changeBy){
 		strength += changeBy;

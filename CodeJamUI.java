@@ -10,21 +10,24 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.OverlayLayout;
 
 public class CodeJamUI {
 	JFrame frame;
-	JPanel artPanel, infoPanel, controlPanel, promptPanel, choicePanel;
+	JPanel artPanel, infoPanel, controlPanel, promptPanel, choicePanel, controlBackground;
 	JScrollPane promptScroll;
 	JLabel choice1, choice2, choice3, choice4;
 	JTextArea promptText;
 	GridBagConstraints frameConstraints, controlConstraints;
 	
-	public CodeJamUI(){
+	public CodeJamUI() throws MalformedURLException, IOException{
 		createFrame();
 		createArtPanel();
 		createControlPanel();
@@ -33,16 +36,23 @@ public class CodeJamUI {
 	}
 	
 	private void createArtPanel() {
-		artPanel= new JPanel();
+		artPanel = new JPanel();
 		artPanel.setBackground(Color.black);
-
+			
 		frameConstraints.fill = GridBagConstraints.BOTH;
 		frameConstraints.gridx = 0;
 		frameConstraints.gridy = 0;
 		frameConstraints.weightx = 1.0;
 		frameConstraints.weighty = 1.0;
+		artPanel.setPreferredSize(artPanel.getPreferredSize());
 		
+		
+		artPanel.setPreferredSize(artPanel.getPreferredSize());
+
 		frame.add(artPanel, frameConstraints);
+		
+		JLabel picLabel = new JLabel(new ImageIcon(loadImage("test.jpg", 945, 500)));
+		artPanel.add(picLabel);
 	}
 
 	private void createInfoPanel() {
@@ -60,10 +70,12 @@ public class CodeJamUI {
 		
 	}
 
-	private void createControlPanel() {
+	private void createControlPanel() throws MalformedURLException, IOException {
 		controlPanel = new JPanel();
 		controlPanel.setLayout(new GridBagLayout());
-		controlPanel.setBackground(Color.gray);
+		controlPanel.setBackground(Color.DARK_GRAY);
+		
+		controlPanel.setPreferredSize(controlPanel.getPreferredSize());
 		
 		frameConstraints.fill = GridBagConstraints.BOTH;
 		frameConstraints.gridx = 0;
@@ -74,7 +86,7 @@ public class CodeJamUI {
 		controlConstraints = new GridBagConstraints();
 		createPromptPanel();
 		createChoicePanel();
-		
+	
 		frame.add(controlPanel, frameConstraints);
 	}
 
@@ -82,6 +94,7 @@ public class CodeJamUI {
 		choicePanel = new JPanel();
 		choicePanel.setLayout(new GridBagLayout());
 		choicePanel.setPreferredSize(choicePanel.getPreferredSize());
+		choicePanel.setOpaque(false);
 		
 		choice1 = new JLabel("Choice 1");
 		choice1.setMinimumSize(new Dimension(500, 30));
@@ -246,6 +259,7 @@ public class CodeJamUI {
 	private void createPromptPanel() {
 		promptPanel = new JPanel();
 		promptPanel.setPreferredSize(promptPanel.getPreferredSize());
+		promptPanel.setOpaque(false);
 		
 		promptText = new JTextArea("Hello World please be bigger ........Hello World please be bigger ........Hello World please be bigger ........Hello World please be bigger ........");
 		promptText.setLineWrap(true);
@@ -287,14 +301,17 @@ public class CodeJamUI {
 		frame.setVisible(true);
 	}
 		
-	private BackgroundPanel loadImage(String pictureName) throws MalformedURLException, IOException{
+	private Image loadImage(String pictureName, int width, int height){
 		ClassLoader loader = CodeJamUI.class.getClassLoader();
-        URL classLocation = loader.getResource("CodeJamUI.class");
-        String classLocationToString = classLocation.toString();
-        String location = classLocationToString.substring(0, classLocationToString.length() - 11) + pictureName;
-        Image returnImage = ImageIO.read(new URL(location));
-        BackgroundPanel returnPanel = new BackgroundPanel(returnImage, BackgroundPanel.SCALED, 0.0f, 0.0f);
-        returnPanel.setPreferredSize(artPanel.getPreferredSize());
-        return returnPanel;
+        String classLocationToString = loader.getResource("CodeJamUI.class").toString();
+        String location = classLocationToString.substring(0, classLocationToString.length() - "CodeJamUI.class".length()) + pictureName;
+        Image returnImage = null;
+		try {
+			returnImage = ImageIO.read(new URL(location)).getScaledInstance(width, height, java.awt.Image.SCALE_SMOOTH);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        return returnImage;
 	}
 }

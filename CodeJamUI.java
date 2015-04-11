@@ -21,9 +21,9 @@ import javax.swing.OverlayLayout;
 
 public class CodeJamUI {
 	JFrame frame;
-	JPanel artPanel, infoPanel, controlPanel, promptPanel, choicePanel, controlBackground;
+	JPanel artPanel, infoPanel, controlPanel, promptPanel, choicePanel, controlBackground, statusPanel, mapPanel;
 	JScrollPane promptScroll;
-	JLabel choice1, choice2, choice3, choice4, picLabel;
+	JLabel choice1, choice2, choice3, choice4, picLabel, mapLabel;
 	JTextArea promptText;
 	GridBagConstraints frameConstraints, controlConstraints;
 	
@@ -51,7 +51,7 @@ public class CodeJamUI {
 
 		frame.add(artPanel, frameConstraints);
 		
-		setArt("test.jpg");
+		setArt("scenePlaceHolder.jpg");
 		
 		artPanel.add(picLabel);
 	}
@@ -59,6 +59,26 @@ public class CodeJamUI {
 	private void createInfoPanel() {
 		infoPanel = new JPanel();
 		infoPanel.setBackground(Color.BLUE);
+		infoPanel.setLayout(new GridBagLayout());
+		
+		createMapPanel();
+		createStatusPanel();
+		
+		GridBagConstraints infoPanelConstraints = new GridBagConstraints();
+		infoPanelConstraints.fill = GridBagConstraints.BOTH;
+		infoPanelConstraints.gridx = 0;
+		infoPanelConstraints.gridy = 0;
+		infoPanelConstraints.weightx = 1.0;
+		infoPanelConstraints.weighty = 0.70;
+		
+		infoPanel.add(mapPanel, infoPanelConstraints);
+		
+		infoPanelConstraints.gridx = 0;
+		infoPanelConstraints.gridy = 1;
+		infoPanelConstraints.weightx = 1.0;
+		infoPanelConstraints.weighty = 1.0;
+		
+		infoPanel.add(statusPanel, infoPanelConstraints);
 		
 		frameConstraints.fill = GridBagConstraints.BOTH;
 		frameConstraints.gridx = 1;
@@ -69,6 +89,22 @@ public class CodeJamUI {
 		
 		frame.add(infoPanel, frameConstraints);
 		
+	}
+
+	private void createStatusPanel() {
+		statusPanel = new JPanel();
+		statusPanel.setBackground(Color.green);
+		
+	}
+
+	private void createMapPanel() {
+		mapPanel = new JPanel();
+		mapPanel.setBackground(Color.DARK_GRAY);
+		mapPanel.setPreferredSize(mapPanel.getPreferredSize());
+		
+		setMap("mapPlaceHolder.jpg");
+		
+		mapPanel.add(mapLabel);
 	}
 
 	private void createControlPanel() throws MalformedURLException, IOException {
@@ -258,7 +294,11 @@ public class CodeJamUI {
 	}
 
 	protected void setArt(String pictureName){
-		picLabel = new JLabel(new ImageIcon(loadImage(pictureName, 945, 500)));
+		picLabel = new JLabel(new ImageIcon(loadImage(pictureName, 925, 400)));
+	}
+	
+	protected void setMap(String mapName){
+		mapLabel = new JLabel(new ImageIcon(loadImage(mapName, 325, 275)));
 	}
 	
 	private void createPromptPanel() {

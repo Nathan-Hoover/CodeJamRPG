@@ -228,13 +228,14 @@ public class CodeJamUI {
 	}
 
 	protected void setChoices() {
-		// TODO Auto-generated method stub
-		
+		choice1.setText("FKLSNFLASF");
+		choice2.setText("asdfsdafasdfasd 1");
+		choice3.setText("sdfadsafadsfsa 2");
+		choice4.setText("Testisadfsfasdfasfsng 3");
 	}
 
 	protected void setPrompt() {
-		// TODO Auto-generated method stub
-		
+		promptText.setText("I set the prompt text");
 	}
 
 	private void createPromptPanel() {

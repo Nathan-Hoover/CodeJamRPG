@@ -381,14 +381,17 @@ class Interact {
 		promptArray[92] = "Sorcerer1- \"We didn’t do anything! I swear!  It was just bad luck that you stepped on the circle!\"  You let go of the sorcerer and look down at the glowing blue circle on the ground.  The blue aura is emanating from it.";
 		choiceArray[92][0] = "\"What is this circle?\"";
 		choiceArray[92][1] = "\"Who is Borale?\"";
+		choiceArray[92][2] = "Kill them!";
 		
 		promptArray[93] = "You look around around you quickly and efficiently.  There is a blue pentagram surrounded by a  circle on the ground, the same one you’ve seen in the cave between Seabreeze Village and West City and the same one as in Natten.  You have questions and these sorcerers have answers.";
 		choiceArray[93][0] = "\"What is this circle?\"";
 		choiceArray[93][1] = "\"Who is Borale?\"";
+		choiceArray[93][2] = "Kill them!";
 		
 		promptArray[94] = "You observe the Sorcerers as you encounter them.  The sorcerers all have a look of surprise, fear, and most importantly, regret.  They all seem to be a bit shifty, not in a harmful way or like they are going to retreat.  They just seem nervous.  You think they will be willing to answer questions.";
 		choiceArray[94][0] = "\"What is this circle?\"";
 		choiceArray[94][1] = "\"Who is Borale?\"";
+		choiceArray[94][2] = "Kill them!";
 
 		promptArray[95] = "";
 		choiceArray[95][0] = "Continue";
@@ -417,7 +420,9 @@ class Interact {
 		while(arrayLocation < 1000){
 			loadArrayData(arrayLocation);
 			switch(arrayLocation){
-			case 0: arrayLocation++; break;	
+			case 0: 
+				theUI.setMap("youngson.jpg");
+				arrayLocation++; break;	
 			case 1: arrayLocation++;
 					if(response == 2){
 						thePlayer.changeMorality(-1);
@@ -426,7 +431,9 @@ class Interact {
 						thePlayer.changeMorality(1);
 					}
 					break;
-			case 2: arrayLocation++; break;
+			case 2: 
+				theUI.setMap("mapPlaceHolder.jpg");
+				arrayLocation++; break;
 			case 3:
 				if(response == 1){
 					arrayLocation = 4;
@@ -452,6 +459,7 @@ class Interact {
 				}
 				break;
 			case 11:
+				theUI.setMap("elderlywoman.jpg");
 				if(response == 1){
 					arrayLocation = 12;
 				}
@@ -493,9 +501,12 @@ class Interact {
 				}
 				break;
 			case 16: arrayLocation = 17; break;
-			case 17: arrayLocation = 18; break;
+			case 17: 
+				theUI.setMap("mapPlaceHolder.jpg");
+				arrayLocation = 18; break;
 			case 18: arrayLocation = 19; break;
 			case 19: 
+				theUI.setArt("cave.jpg");
 				if(response == 1){
 					arrayLocation = 20;
 				}
@@ -870,6 +881,9 @@ class Interact {
 					}
 					if(response == 2){
 						arrayLocation = 97;
+					}
+					if(response == 3){
+						arrayLocation = 95;
 					}
 					break;
 				case 95:

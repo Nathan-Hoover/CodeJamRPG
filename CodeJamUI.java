@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Image;
@@ -17,6 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 
 public class CodeJamUI {
@@ -30,11 +32,80 @@ public class CodeJamUI {
 	JTextArea promptText;
 	GridBagConstraints frameConstraints, controlConstraints;
 	
+	private void titleScreen() {
+		JPanel titleScreenPanel = new JPanel();
+		titleScreenPanel.setLayout(new GridBagLayout());
+		titleScreenPanel.setBackground(Color.BLACK);
+		
+		GridBagConstraints titleScreenConstraints = new GridBagConstraints();
+		titleScreenConstraints.fill = GridBagConstraints.BOTH;
+		titleScreenConstraints.gridx = 0;
+		titleScreenConstraints.gridy = 0;
+		titleScreenConstraints.weightx = 1.0;
+		titleScreenConstraints.weighty = 0.70;
+		
+		JLabel title = new JLabel("Title Pending", SwingConstants.CENTER);
+		title.setFont(new Font("Serif", Font.PLAIN, 100));
+		title.setForeground(Color.white);
+		JLabel by = new JLabel("BY: Nathaniel Hoover, Brandon Bauman, Wes Letcher", SwingConstants.CENTER);
+		by.setFont(new Font("Serif", Font.PLAIN, 40));
+		by.setForeground(Color.white);
+		JLabel startLabel = new JLabel("Start Game", SwingConstants.CENTER);
+		startLabel.setFont(new Font("Serif", Font.PLAIN, 40));
+		startLabel.setBackground(Color.white);
+		startLabel.setForeground(Color.white);
+		
+		startLabel.addMouseListener(new MouseListener() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				artPanel.setVisible(true);
+				infoPanel.setVisible(true);
+				controlPanel.setVisible(true);
+				titleScreenPanel.setVisible(false);
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {	
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent e) {	
+			}
+        });
+		
+		titleScreenPanel.add(title, titleScreenConstraints);
+		titleScreenConstraints.gridy = 1;
+		titleScreenPanel.add(by, titleScreenConstraints);
+		titleScreenConstraints.gridy = 2;
+		titleScreenConstraints.gridheight = 2;
+		titleScreenPanel.add(startLabel, titleScreenConstraints);
+		
+		frameConstraints.fill = GridBagConstraints.BOTH;
+		frameConstraints.gridx = 0;
+		frameConstraints.gridy = 0;
+		frameConstraints.weightx = 1.0;
+		frameConstraints.weighty = 1.0;
+		
+		frame.add(titleScreenPanel, frameConstraints);
+	}
+	
 	public CodeJamUI() throws MalformedURLException, IOException{
 		createFrame();
 		createArtPanel();
+		artPanel.setVisible(false);
 		createControlPanel();
+		controlPanel.setVisible(false);
 		createInfoPanel();
+		infoPanel.setVisible(false);
+		titleScreen();
 		frame.pack();
 	}
 	

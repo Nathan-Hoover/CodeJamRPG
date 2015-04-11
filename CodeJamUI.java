@@ -12,13 +12,12 @@ import java.net.URL;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.OverlayLayout;
 
 public class CodeJamUI {
+	Interact theInteractions;
 	JFrame frame;
 	JPanel artPanel, infoPanel, controlPanel, promptPanel, choicePanel, controlBackground, statusPanel, mapPanel;
 	JScrollPane promptScroll;
@@ -167,6 +166,7 @@ public class CodeJamUI {
 		choice1.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				theInteractions.test();
 			}
 
 			@Override
@@ -189,7 +189,7 @@ public class CodeJamUI {
 		choice2.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				setChoices();
+				setChoices("test","test","test","test");
 			}
 
 			@Override
@@ -212,7 +212,7 @@ public class CodeJamUI {
 		choice3.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				setPrompt();
+				setPrompt("");
 			}
 
 			@Override
@@ -281,23 +281,37 @@ public class CodeJamUI {
 		controlPanel.add(choicePanel, controlConstraints);
 	}
 
-	protected void setChoices() {
-		choice1.setText("FKLSNFLASF");
-		choice2.setText("asdfsdafasdfasd 1");
-		choice3.setText("sdfadsafadsfsa 2");
-		choice4.setText("Testisadfsfasdfasfsng 3");
+	protected void setChoices(String textOptionOne, String textOptionTwo, String textOptionThree, String textOptionFour) {
+		choice1.setText(textOptionOne);
+		choice2.setText(textOptionTwo);
+		choice3.setText(textOptionThree);
+		choice4.setText(textOptionFour);
 	}
 
-	protected void setPrompt() {
-		promptText.setText("WOWOWOWOWOWOWWOWOWO");
+	protected void setPrompt(String inputPromptText) {
+		promptText.setText(inputPromptText);
+		promptPanel.revalidate();
+		promptPanel.repaint();
 	}
 
 	protected void setArt(String pictureName){
+		artPanel.removeAll();
 		picLabel = new JLabel(new ImageIcon(loadImage(pictureName, 925, 400)));
+		artPanel.add(picLabel);
+		artPanel.revalidate();
+		artPanel.repaint();
+		System.out.println(pictureName);
 	}
 	
 	protected void setMap(String mapName){
 		mapLabel = new JLabel(new ImageIcon(loadImage(mapName, 325, 275)));
+		mapPanel.revalidate();
+		mapPanel.repaint();
+		
+	}
+	
+	public void setInteract(){
+		theInteractions = main.theInteractions;
 	}
 	
 	private void createPromptPanel() {
